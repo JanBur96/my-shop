@@ -1,0 +1,46 @@
+<template>
+  <section class="categories">
+    <h3 class="categories__heading">{{ category }}</h3>
+    <ul class="categories__list">
+      <BaseListItem
+        v-for="product in products"
+        :key="product.title"
+        :title="product.title"
+        :location="product.location"
+        :price="product.price"
+      />
+    </ul>
+  </section>
+</template>
+
+<script>
+export default {
+  props: {
+    category: {
+      type: String,
+      required: true,
+      default: false
+    },
+    products: {
+      type: Array,
+      required: true,
+      default: []
+    }
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+.categories {
+  &__heading {
+    margin-top: 1rem;
+  }
+
+  &__list {
+    margin-top: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 1rem;
+  }
+}
+</style>

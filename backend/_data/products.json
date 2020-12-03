@@ -1,0 +1,38 @@
+[
+  {
+    "_id": "5d713995b721c3bb38c1f5d0",
+    "user": "5d7a514b5d2c12c7449be042",
+    "title": "iPhone 10",
+    "description": "I sell my used iPhone 10",
+    "categories": ["technology"],
+    "location": "Bielefeld",
+    "price": 499.99
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5d1",
+    "user": "5d7a514b5d2c12c7449be042",
+    "title": "Socks",
+    "description": "I got them to christmas, and I really don' want to keep them",
+    "categories": ["clothes"],
+    "location": "Bielefeld",
+    "price": 9.99
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5d2",
+    "user": "5d7a514b5d2c12c7449be042",
+    "title": "Cool Lamp",
+    "description": "I loved this cool lamp, but I bought a new one, which is cooler, that's why I want to sell this good piece.",
+    "categories": ["furniture"],
+    "location": "Bielefeld",
+    "price": 12.0
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5d4",
+    "user": "5d7a514b5d2c12c7449be042",
+    "title": "bed",
+    "description": "bed",
+    "categories": ["furniture"],
+    "location": "Bielefeld",
+    "price": 155
+  }
+]
