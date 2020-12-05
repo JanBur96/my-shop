@@ -37,6 +37,7 @@ export default {
           { set: "@fortawesome/free-regular-svg-icons", icons: ["faEnvelope"] },
           { set: "@fortawesome/free-regular-svg-icons", icons: ["faCompass"] },
           { set: "@fortawesome/free-regular-svg-icons", icons: ["faEdit"] },
+          { set: "@fortawesome/free-regular-svg-icons", icons: ["faTrashAlt"] },
           { set: "@fortawesome/free-solid-svg-icons", icons: ["faUserEdit"] }
         ]
       }

@@ -12,7 +12,9 @@
       <div class="my-profile__row-1">
         <div class="my-profile__idk">
           <h5>{{ title }}</h5>
-          <fa class="my-profile__icon" :icon="['far', 'edit']" />
+          <nuxt-link :to="`/myprofile/${id}`"
+            ><fa class="my-profile__icon" :icon="['far', 'edit']"
+          /></nuxt-link>
         </div>
         <p>{{ price }}€</p>
       </div>
@@ -27,7 +29,8 @@ export default {
     title: {},
     image: {},
     price: {},
-    description: {}
+    description: {},
+    id: {}
   }
 };
 </script>

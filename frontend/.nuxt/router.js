@@ -14,6 +14,8 @@ const _60fc8c5e = () => interopDefault(import('../pages/signin/index.vue' /* web
 const _559edfc7 = () => interopDefault(import('../pages/signup/index.vue' /* webpackChunkName: "pages/signup/index" */))
 const _122645d4 = () => interopDefault(import('../pages/support/index.vue' /* webpackChunkName: "pages/support/index" */))
 const _362aa8bb = () => interopDefault(import('../pages/technology/index.vue' /* webpackChunkName: "pages/technology/index" */))
+const _3415044e = () => interopDefault(import('../pages/myprofile/UpdateDetails/index.vue' /* webpackChunkName: "pages/myprofile/UpdateDetails/index" */))
+const _bb3577f0 = () => interopDefault(import('../pages/myprofile/_UpdateProduct/index.vue' /* webpackChunkName: "pages/myprofile/_UpdateProduct/index" */))
 const _0ca67b56 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 // TODO: remove in Nuxt 3
@@ -76,6 +78,14 @@ export const routerOptions = {
     path: "/technology",
     component: _362aa8bb,
     name: "technology"
+  }, {
+    path: "/myprofile/UpdateDetails",
+    component: _3415044e,
+    name: "myprofile-UpdateDetails"
+  }, {
+    path: "/myprofile/:UpdateProduct",
+    component: _bb3577f0,
+    name: "myprofile-UpdateProduct"
   }, {
     path: "/",
     component: _0ca67b56,

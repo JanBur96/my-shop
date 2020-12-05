@@ -3,7 +3,9 @@
     <div class="my-profile__wrapper">
       <h4 class="my-profile__heading">
         Your Details
-        <fa class="my-profile__icon--heading" :icon="['fas', 'user-edit']" />
+        <nuxt-link to="/myprofile/updatedetails"
+          ><fa class="my-profile__icon--heading" :icon="['fas', 'user-edit']"
+        /></nuxt-link>
       </h4>
 
       <div class="my-profile__information">

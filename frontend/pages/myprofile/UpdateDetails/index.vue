@@ -1,84 +1,60 @@
 <template>
-  <section class="add-product">
-    <h3 class="add-product__heading">Add a new product</h3>
-    <base-card class="add-product__card">
-      <form action="" class="add-product__form" @submit.prevent="addProduct">
-        <div class="add-product__form-control">
+  <main class="edit-details">
+    <BaseHeader heading="Edit Details" image="editdetails-header.jpg" />
+    <h3 class="edit-details__heading">Edit your details</h3>
+    <base-card class="edit-details__card">
+      <form action="" class="edit-details__form" @submit.prevent="addProduct">
+        <div class="edit-details__form-control">
           <label for="">Title</label>
-          <input class="add-product__input" v-model="title" type="text" />
+          <input class="edit-details__input" v-model="title" type="text" />
         </div>
-        <div class="add-product__form-control--triple">
-          <div class="add-product__form-control">
+        <div class="edit-details__form-control--triple">
+          <div class="edit-details__form-control">
             <label for="">Category</label>
-            <select v-model="category" class="add-product__input">
+            <select v-model="category" class="edit-details__input">
               <option value="technology">Technology</option>
               <option value="furniture">Furniture</option>
               <option value="clothes">Clothes</option>
               <option value="misc">Misc</option>
             </select>
           </div>
-          <div class="add-product__form-control">
+          <div class="edit-details__form-control">
             <label for="">Location</label>
-            <input class="add-product__input" v-model="location" type="text" />
+            <input class="edit-details__input" v-model="location" type="text" />
           </div>
-          <div class="add-product__form-control">
+          <div class="edit-details__form-control">
             <label for="">Price</label>
-            <input class="add-product__input" v-model="price" type="text" />
+            <input class="edit-details__input" v-model="price" type="text" />
           </div>
         </div>
-        <div class="add-product__form-control">
+        <div class="edit-details__form-control">
           <label for="">Description</label>
           <textarea
             v-model="description"
-            class="add-product__input--alt"
+            class="edit-details__input--alt"
             rows="7"
           ></textarea>
         </div>
-        <button class="add-product__button">Add Product</button>
+        <button class="edit-details__button">Add Product</button>
       </form>
     </base-card>
-  </section>
+  </main>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      category: "",
-      title: "",
-      description: "",
-      location: "",
-      price: ""
-    };
-  },
-  methods: {
-    async addProduct() {
-      await this.$axios.post(
-        "/products",
-        {
-          categories: this.category,
-          title: this.title,
-          description: this.description,
-          location: this.location,
-          price: this.price
-        },
-        this.$router.push("/")
-      );
-    }
-  }
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
-.add-product {
+.edit-details {
   &__heading {
-    margin-top: 1rem;
     text-align: center;
+    margin: 1rem 0rem;
   }
 
   &__card {
     width: 25rem;
-    margin: 1rem auto 0 auto;
+    margin: 0 auto;
     padding: 1rem;
   }
 

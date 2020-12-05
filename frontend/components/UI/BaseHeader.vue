@@ -33,7 +33,6 @@ export default {
   justify-content: center;
   align-items: center;
   box-shadow: 0px 0px 5px 1px rgba($color: #000000, $alpha: 0.2);
-  border: 1px solid rgba($color: #000000, $alpha: 0.2);
   border-radius: 5px;
   color: white;
   font-size: 3rem;

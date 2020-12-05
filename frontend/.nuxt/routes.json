@@ -3,84 +3,84 @@
     "name": "addproduct",
     "path": "/addproduct",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/addproduct/index.vue",
-    "chunkName": "pages/addproduct/index",
-    "_name": "_eee92346"
+    "chunkName": "pages/addproduct/index"
   },
   {
     "name": "categories",
     "path": "/categories",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/categories/index.vue",
-    "chunkName": "pages/categories/index",
-    "_name": "_944f546a"
+    "chunkName": "pages/categories/index"
   },
   {
     "name": "clothes",
     "path": "/clothes",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/clothes/index.vue",
-    "chunkName": "pages/clothes/index",
-    "_name": "_a56ab362"
+    "chunkName": "pages/clothes/index"
   },
   {
     "name": "faq",
     "path": "/faq",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/faq/index.vue",
-    "chunkName": "pages/faq/index",
-    "_name": "_622b119d"
+    "chunkName": "pages/faq/index"
   },
   {
     "name": "furniture",
     "path": "/furniture",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/furniture/index.vue",
-    "chunkName": "pages/furniture/index",
-    "_name": "_4cc09a79"
+    "chunkName": "pages/furniture/index"
   },
   {
     "name": "misc",
     "path": "/misc",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/misc/index.vue",
-    "chunkName": "pages/misc/index",
-    "_name": "_51a92f9b"
+    "chunkName": "pages/misc/index"
   },
   {
     "name": "myprofile",
     "path": "/myprofile",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/myprofile/index.vue",
-    "chunkName": "pages/myprofile/index",
-    "_name": "_4859d344"
+    "chunkName": "pages/myprofile/index"
   },
   {
     "name": "signin",
     "path": "/signin",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/signin/index.vue",
-    "chunkName": "pages/signin/index",
-    "_name": "_60fc8c5e"
+    "chunkName": "pages/signin/index"
   },
   {
     "name": "signup",
     "path": "/signup",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/signup/index.vue",
-    "chunkName": "pages/signup/index",
-    "_name": "_559edfc7"
+    "chunkName": "pages/signup/index"
   },
   {
     "name": "support",
     "path": "/support",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/support/index.vue",
-    "chunkName": "pages/support/index",
-    "_name": "_122645d4"
+    "chunkName": "pages/support/index"
   },
   {
     "name": "technology",
     "path": "/technology",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/technology/index.vue",
-    "chunkName": "pages/technology/index",
-    "_name": "_362aa8bb"
+    "chunkName": "pages/technology/index"
+  },
+  {
+    "name": "myprofile-UpdateDetails",
+    "path": "/myprofile/UpdateDetails",
+    "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/myprofile/UpdateDetails/index.vue",
+    "chunkName": "pages/myprofile/UpdateDetails/index"
+  },
+  {
+    "name": "myprofile-UpdateProduct",
+    "path": "/myprofile/:UpdateProduct",
+    "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/myprofile/_UpdateProduct/index.vue",
+    "chunkName": "pages/myprofile/_UpdateProduct/index"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_0ca67b56"
+    "chunkName": "pages/index"
   }
 ]

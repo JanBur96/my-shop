@@ -31,7 +31,7 @@ export default {
   }
 
   &__list {
-    height: 30rem;
+    height: 27.5rem;
     margin-top: 0.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;

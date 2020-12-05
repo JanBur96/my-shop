@@ -28,6 +28,9 @@ config.autoAddCss = false
     import  { faEdit as fortawesomefreeregularsvgicons_faEdit } from '@fortawesome/free-regular-svg-icons'
     library.add(fortawesomefreeregularsvgicons_faEdit)
 
+    import  { faTrashAlt as fortawesomefreeregularsvgicons_faTrashAlt } from '@fortawesome/free-regular-svg-icons'
+    library.add(fortawesomefreeregularsvgicons_faTrashAlt)
+
     import  { faUserEdit as fortawesomefreesolidsvgicons_faUserEdit } from '@fortawesome/free-solid-svg-icons'
     library.add(fortawesomefreesolidsvgicons_faUserEdit)
 

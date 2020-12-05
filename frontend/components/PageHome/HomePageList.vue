@@ -35,7 +35,7 @@ export default {
   &__list {
     margin-top: 0.5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
     gap: 1rem;
   }
 }
