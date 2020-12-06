@@ -56,7 +56,13 @@
             <nuxt-link to="/misc">Misc.</nuxt-link>
           </li>
         </ul>
-        <input type="text" placeholder="Search" class="header__input" />
+        <input
+          type="text"
+          placeholder="Search"
+          class="header__input"
+          @keyup.enter="search"
+          v-model="searchBy"
+        />
       </base-container>
     </div>
   </header>
@@ -66,11 +72,15 @@
 export default {
   data() {
     return {
-      isAuth: false
+      isAuth: false,
+      searchBy: ""
     };
   },
-  mounted($auth) {
-    console.log(this.$auth);
+  methods: {
+    search() {
+      this.$router.push(`/products/search/${this.searchBy}`);
+      this.searchBy = "";
+    }
   }
 };
 </script>

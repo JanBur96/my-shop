@@ -1,22 +1,4 @@
 {
-  "TheFooter": {
-    "description": "Auto imported from components/Navigation/TheFooter.vue"
-  },
-  "LazyTheFooter": {
-    "description": "Auto imported from components/Navigation/TheFooter.vue"
-  },
-  "TheHeader": {
-    "description": "Auto imported from components/Navigation/TheHeader.vue"
-  },
-  "LazyTheHeader": {
-    "description": "Auto imported from components/Navigation/TheHeader.vue"
-  },
-  "AddProductPageForm": {
-    "description": "Auto imported from components/PageAddProduct/AddProductPageForm.vue"
-  },
-  "LazyAddProductPageForm": {
-    "description": "Auto imported from components/PageAddProduct/AddProductPageForm.vue"
-  },
   "CategoriesPageList": {
     "description": "Auto imported from components/PageCategories/CategoriesPageList.vue"
   },
@@ -40,6 +22,18 @@
   },
   "LazyHomePageListItem": {
     "description": "Auto imported from components/PageHome/HomePageListItem.vue"
+  },
+  "TheFooter": {
+    "description": "Auto imported from components/Navigation/TheFooter.vue"
+  },
+  "LazyTheFooter": {
+    "description": "Auto imported from components/Navigation/TheFooter.vue"
+  },
+  "TheHeader": {
+    "description": "Auto imported from components/Navigation/TheHeader.vue"
+  },
+  "LazyTheHeader": {
+    "description": "Auto imported from components/Navigation/TheHeader.vue"
   },
   "MyProfilePageDetails": {
     "description": "Auto imported from components/PageMyProfile/MyProfilePageDetails.vue"
@@ -106,5 +100,11 @@
   },
   "LazyBaseListItem": {
     "description": "Auto imported from components/UI/BaseListItem.vue"
+  },
+  "AddProductPageForm": {
+    "description": "Auto imported from components/PageAddProduct/AddProductPageForm.vue"
+  },
+  "LazyAddProductPageForm": {
+    "description": "Auto imported from components/PageAddProduct/AddProductPageForm.vue"
   }
 }

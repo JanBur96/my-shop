@@ -9,6 +9,7 @@ const {
   updateProduct,
   deleteProduct,
   productPhotoUpload,
+  getProductsByName,
 } = require('../controllers/products');
 
 const Product = require('../models/Product');
@@ -23,11 +24,13 @@ router
   .get(
     advancedResults(Product, {
       path: 'user',
-      select: 'name',
+      select: ['name', 'location'],
     }),
     getProducts
   )
   .post(protect, createProduct);
+
+router.route('/search/:search').get(getProductsByName);
 
 // /api/v1/products/:id
 router

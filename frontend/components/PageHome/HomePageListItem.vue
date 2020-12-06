@@ -1,20 +1,22 @@
 <template>
-  <base-card>
-    <li class="latest-products__item">
-      <img
-        class="latest-products__item__image"
-        src="https://via.placeholder.com/150"
-        :alt="`A picture of ${title}`"
-      />
-      <div class="latest-products__item__text">
-        <h4 class="latest-products__item__title">{{ title }}</h4>
-        <div class="latest-products__item__row-2">
-          <p class="latest-products__item__location">{{ location }}</p>
-          <p>{{ price }}€</p>
+  <nuxt-link :to="`/products/${this.id}`">
+    <base-card>
+      <li class="latest-products__item">
+        <img
+          class="latest-products__item__image"
+          src="https://via.placeholder.com/150"
+          :alt="`A picture of ${title}`"
+        />
+        <div class="latest-products__item__text">
+          <h4 class="latest-products__item__title">{{ title }}</h4>
+          <div class="latest-products__item__row-2">
+            <p class="latest-products__item__location">{{ location }}</p>
+            <p>{{ price }}€</p>
+          </div>
         </div>
-      </div>
-    </li>
-  </base-card>
+      </li>
+    </base-card>
+  </nuxt-link>
 </template>
 
 <script>
@@ -39,7 +41,8 @@ export default {
       type: Number,
       required: true,
       default: false
-    }
+    },
+    id: {}
   }
 };
 </script>

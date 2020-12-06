@@ -9,7 +9,8 @@
           title: product.title,
           description: product.description,
           location: product.location,
-          price: product.price
+          price: product.price,
+          id: product._id
         }"
       />
     </ul>

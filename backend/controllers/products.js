@@ -11,6 +11,15 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
   res.status(200).json(res.advancedResults);
 });
 
+exports.getProductsByName = asyncHandler(async (req, res, next) => {
+  const product = await Product.find({ $text: { $search: req.params.search } });
+
+  res.status(200).json({
+    success: true,
+    data: product,
+  });
+});
+
 // @desc      Create a new product
 // @route     POST /api/v1/products
 // @access    Private

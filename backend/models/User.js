@@ -37,6 +37,11 @@ const UserSchema = new mongoose.Schema({
       ref: 'Product',
     },
   ],
+  location: {
+    type: String,
+    required: false,
+    default: 'No location available',
+  },
 });
 
 // Encrypt password using bcrypt

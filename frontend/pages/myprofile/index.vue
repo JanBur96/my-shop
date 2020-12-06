@@ -9,6 +9,7 @@
           <MyProfilePageDetails
             :name="this.myProfile.name"
             :email="this.myProfile.email"
+            :location="this.myProfile.location"
           />
           <MyProfilePageProducts :products="this.myProfile.products" />
         </section>

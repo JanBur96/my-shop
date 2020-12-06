@@ -3,9 +3,11 @@
     <div class="my-profile__wrapper">
       <h4 class="my-profile__heading">
         Your Details
-        <nuxt-link to="/myprofile/updatedetails"
-          ><fa class="my-profile__icon--heading" :icon="['fas', 'user-edit']"
-        /></nuxt-link>
+        <fa
+          class="my-profile__icon--heading"
+          :icon="['fas', 'user-edit']"
+          @click="editUser = !editUser"
+        />
       </h4>
 
       <div class="my-profile__information">
@@ -13,22 +15,49 @@
           <fa class="my-profile__icon" :icon="['far', 'user']" />
           <div class="row-2">
             <p class="my-profile__information-heading">Name:</p>
-            <p>{{ name }}</p>
+            <p v-if="!editUser">{{ name }}</p>
+            <input
+              class="my-profile__input"
+              v-else
+              v-model="editName"
+              :placeholder="name"
+            />
           </div>
         </div>
         <div class="my-profile__information-control">
           <fa class="my-profile__icon" :icon="['far', 'envelope']" />
           <div class="my-profile__row-2">
             <p class="my-profile__information-heading">Email:</p>
-            <p>{{ email }}</p>
+            <p v-if="!editUser">{{ email }}</p>
+            <input
+              class="my-profile__input"
+              v-else
+              v-model="editEmail"
+              :placeholder="email"
+            />
           </div>
         </div>
         <div class="my-profile__information-control">
           <fa class="my-profile__icon" :icon="['far', 'compass']" />
           <div class="my-profile__row-2">
             <p class="my-profile__information-heading">Location:</p>
-            <p>{{ location }}</p>
+            <p v-if="!editUser">{{ location }}</p>
+            <input
+              class="my-profile__input"
+              v-else
+              v-model="editLocation"
+              :placeholder="location"
+            />
           </div>
+        </div>
+        <div class="my-profile__button-control">
+          <button
+            class="my-profile__button"
+            v-if="editUser"
+            @click="updateDetails"
+          >
+            Update
+          </button>
         </div>
       </div>
     </div>
@@ -37,6 +66,28 @@
 
 <script>
 export default {
+  data() {
+    return {
+      editUser: false,
+      editName: "",
+      editEmail: "",
+      editLocation: ""
+    };
+  },
+  methods: {
+    async updateDetails() {
+      console.log(this.editName, this.editEmail, this.editLocation);
+      await this.$axios.put(
+        `/auth/updatedetails`,
+        {
+          email: this.editEmail,
+          name: this.editName,
+          location: this.editLocation
+        },
+        location.reload()
+      );
+    }
+  },
   props: {
     name: {
       type: String,
@@ -61,6 +112,16 @@ export default {
     background-color: var(--main-color);
     color: white;
     border-radius: 0 10px 10px 0;
+  }
+
+  &__input {
+    width: 100%;
+    margin-top: 0.2rem;
+
+    padding-left: 0.25rem;
+    border: 1px solid rgba($color: #000000, $alpha: 0.2);
+    border-radius: 5px;
+    outline-color: var(--main-color);
   }
 
   &__wrapper {
@@ -101,6 +162,25 @@ export default {
       cursor: pointer;
       margin-top: 2px;
     }
+  }
+
+  &__button-control {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__button {
+    width: 9rem;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border: 1px solid white;
+    padding: 0.1rem;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
   }
 }
 </style>

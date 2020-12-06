@@ -18,8 +18,7 @@ export default {
   props: {
     category: {
       type: String,
-      required: true,
-      default: false
+      required: false
     },
     products: {
       type: Array,
