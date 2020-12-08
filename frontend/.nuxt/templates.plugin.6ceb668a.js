@@ -43,6 +43,12 @@ config.autoAddCss = false
     import  { faSearch as fortawesomefreesolidsvgicons_faSearch } from '@fortawesome/free-solid-svg-icons'
     library.add(fortawesomefreesolidsvgicons_faSearch)
 
+    import  { faGift as fortawesomefreesolidsvgicons_faGift } from '@fortawesome/free-solid-svg-icons'
+    library.add(fortawesomefreesolidsvgicons_faGift)
+
+    import  { faShare as fortawesomefreesolidsvgicons_faShare } from '@fortawesome/free-solid-svg-icons'
+    library.add(fortawesomefreesolidsvgicons_faShare)
+
 Vue.component('fa', FontAwesomeIcon)
 Vue.component('fa-layers', FontAwesomeLayers)
 Vue.component('fa-layers-text', FontAwesomeLayersText)

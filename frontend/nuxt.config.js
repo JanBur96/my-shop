@@ -41,7 +41,9 @@ export default {
           { set: "@fortawesome/free-solid-svg-icons", icons: ["faUserEdit"] },
           { set: "@fortawesome/free-solid-svg-icons", icons: ["faArrowRight"] },
           { set: "@fortawesome/free-solid-svg-icons", icons: ["faArrowLeft"] },
-          { set: "@fortawesome/free-solid-svg-icons", icons: ["faSearch"] }
+          { set: "@fortawesome/free-solid-svg-icons", icons: ["faSearch"] },
+          { set: "@fortawesome/free-solid-svg-icons", icons: ["faGift"] },
+          { set: "@fortawesome/free-solid-svg-icons", icons: ["faShare"] }
         ]
       }
     ]

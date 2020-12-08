@@ -6,15 +6,10 @@
         Edit your product
       </h3>
       <BaseProductForm
-        v-if="!uploadedPicture"
         mode="update"
         @productAction="productAction"
         :product="product"
       />
-    </div>
-    <div v-else>
-      <h3 class="edit-product__heading-3">Uploaded Succesfully!</h3>
-      <nuxt-link to="/users/myprofile">Take me back to my profile</nuxt-link>
     </div>
   </main>
 </template>
@@ -33,6 +28,11 @@ export default {
       uploadedPicture: false
     };
   },
+  updated() {
+    if (this.uploadedPicture === true) {
+      this.$router.push("/users/myprofile");
+    }
+  },
   methods: {
     async productAction(data) {
       if (data.type === "editProduct") {
@@ -49,6 +49,7 @@ export default {
         );
       } else if (data.type === "deleteProduct") {
         await this.$axios.delete(`/products/${this.id}`);
+        this.$router.push("/users/myprofile");
       } else if (data.type === "goBack") {
         this.$router.push("/users/myprofile");
       } else if (data.type === "uploadImage") {
@@ -61,7 +62,7 @@ export default {
             "Content-Type": "multipart/form-data"
           }
         });
-        // this.$router.push("/users/myprofile");
+
         this.uploadedPicture = true;
       }
     }

@@ -1,6 +1,7 @@
 <template>
   <section class="homepage-list">
     <h3>Latest Products</h3>
+
     <ul class="homepage-list__list">
       <HomePageListItem
         v-for="product in products"
@@ -24,6 +25,17 @@ export default {
     products: {
       type: Array,
       required: true
+    }
+  },
+  data() {
+    return {
+      selected: "New"
+    };
+  },
+  methods: {
+    changeFilter() {
+      console.log(this.selected);
+      this.$emit("changeFilter", this.selected);
     }
   }
 };

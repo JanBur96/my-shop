@@ -2,7 +2,7 @@
   <main class="my-profile">
     <base-container>
       <BaseHeader image="myprofile-header.jpg" heading="My Profile" />
-      <h3 class="my-profile__heading">Hello {{ myProfile.name }}</h3>
+      <h3 class="my-profile__heading">Hello, {{ myProfile.name }}</h3>
       <p v-if="!finishedFetch">Loading...</p>
       <base-card class="my-profile__card" v-else>
         <section class="my-profile__infos">
