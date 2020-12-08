@@ -4,10 +4,12 @@
     <ul class="categories__list">
       <BaseListItem
         v-for="product in products"
-        :key="product.title"
+        :key="product._id"
         :title="product.title"
         :location="product.location"
         :price="product.price"
+        :id="product._id"
+        :photo="product.photo"
       />
     </ul>
   </section>

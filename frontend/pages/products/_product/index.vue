@@ -4,7 +4,7 @@
     <base-card class="product__card">
       <img
         class="product__image"
-        src="https://via.placeholder.com/500"
+        :src="require(`~/assets/product-images/${product.photo}`)"
         alt=""
       />
 
@@ -33,6 +33,7 @@ export default {
   async asyncData({ params, $axios }) {
     let product = await $axios.get(`/products/${params.product}`);
     product = product.data.data;
+    console.log(product);
 
     let user = await $axios.get(`/users/${product.user}`);
     user = user.data.data;
@@ -62,12 +63,6 @@ export default {
     grid-template-rows: 2fr 1fr;
   }
 
-  &__header {
-  }
-
-  &__row-1 {
-  }
-
   &__row-2 {
     border-top: 1px solid var(--main-color);
     display: grid;
@@ -78,9 +73,6 @@ export default {
     display: flex;
     justify-content: space-between;
     margin-top: 0.2rem;
-  }
-
-  &__lower {
   }
 }
 </style>

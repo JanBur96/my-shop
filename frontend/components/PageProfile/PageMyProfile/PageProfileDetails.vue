@@ -4,6 +4,7 @@
       <h4 class="my-profile__heading">
         Your Details
         <fa
+          v-if="mode === 'editable'"
           class="my-profile__icon--heading"
           :icon="['fas', 'user-edit']"
           @click="editUser = !editUser"
@@ -76,7 +77,6 @@ export default {
   },
   methods: {
     async updateDetails() {
-      console.log(this.editName, this.editEmail, this.editLocation);
       await this.$axios.put(
         `/auth/updatedetails`,
         {
@@ -102,7 +102,8 @@ export default {
       required: false,
       default: "Not available"
     }
-  }
+  },
+  inject: ["mode"]
 };
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <ul class="my-profile__list">
-    <MyProfilePageProductsListItem
+    <PageProfileProductsListItem
       v-for="product in products"
       :key="product.id"
       :title="product.title"
@@ -8,6 +8,7 @@
       :price="product.price"
       :description="product.description"
       :id="product._id"
+      :photo="product.photo"
     />
   </ul>
 </template>

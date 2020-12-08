@@ -3,7 +3,10 @@
     :style="{ backgroundImage: `url(${require(`@/assets/images/${image}`)})` }"
     class="all-categories__item"
   >
-    <nuxt-link class="all-categories__link" :to="title.toLowerCase()">
+    <nuxt-link
+      class="all-categories__link"
+      :to="`/products/categories/${title.toLowerCase()}`"
+    >
       <h4 class="all-categories__heading">{{ title }}</h4>
     </nuxt-link>
   </li>

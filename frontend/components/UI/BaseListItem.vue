@@ -1,25 +1,28 @@
 <template>
   <base-card>
-    <li class="categories__item">
-      <img
-        class="categories__image"
-        src="https://via.placeholder.com/150"
-        alt=""
-      />
-      <div class="categories__text">
-        <h4>{{ title }}</h4>
-        <div class="categories__row-2">
-          <p>{{ location }}</p>
-          <p>{{ price }}€</p>
+    <nuxt-link :to="`/products/${id}`">
+      <li class="categories__item">
+        <img
+          class="categories__image"
+          :src="require(`~/assets/product-images/${photo}`)"
+          alt=""
+        />
+        <div class="categories__text">
+          <h4>{{ title }}</h4>
+          <div class="categories__row-2">
+            <p>{{ location }}</p>
+            <p>{{ price }}€</p>
+          </div>
         </div>
-      </div>
-    </li>
+      </li>
+    </nuxt-link>
   </base-card>
 </template>
 
 <script>
 export default {
   props: {
+    id: {},
     title: {
       type: String,
       required: true
@@ -31,7 +34,8 @@ export default {
     price: {
       type: Number,
       required: true
-    }
+    },
+    photo: {}
   }
 };
 </script>

@@ -34,6 +34,15 @@ config.autoAddCss = false
     import  { faUserEdit as fortawesomefreesolidsvgicons_faUserEdit } from '@fortawesome/free-solid-svg-icons'
     library.add(fortawesomefreesolidsvgicons_faUserEdit)
 
+    import  { faArrowRight as fortawesomefreesolidsvgicons_faArrowRight } from '@fortawesome/free-solid-svg-icons'
+    library.add(fortawesomefreesolidsvgicons_faArrowRight)
+
+    import  { faArrowLeft as fortawesomefreesolidsvgicons_faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+    library.add(fortawesomefreesolidsvgicons_faArrowLeft)
+
+    import  { faSearch as fortawesomefreesolidsvgicons_faSearch } from '@fortawesome/free-solid-svg-icons'
+    library.add(fortawesomefreesolidsvgicons_faSearch)
+
 Vue.component('fa', FontAwesomeIcon)
 Vue.component('fa-layers', FontAwesomeLayers)
 Vue.component('fa-layers-text', FontAwesomeLayersText)

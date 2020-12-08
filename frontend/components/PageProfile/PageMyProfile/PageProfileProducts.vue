@@ -1,7 +1,7 @@
 <template>
   <section class="my-profile__products">
     <h4 class="my-profile__heading">Your products</h4>
-    <MyProfilePageProductsList :products="products" />
+    <PageProfileProductsList :products="products" />
   </section>
 </template>
 

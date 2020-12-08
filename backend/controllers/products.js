@@ -144,6 +144,7 @@ exports.productPhotoUpload = asyncHandler(async (req, res, next) => {
     );
   }
 
+  console.log(req.body.files);
   console.log(req.file);
   console.log(req.files);
 

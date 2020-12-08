@@ -1,7 +1,7 @@
 <template>
-  <section class="latest-products">
+  <section class="homepage-list">
     <h3>Latest Products</h3>
-    <ul class="latest-products__list">
+    <ul class="homepage-list__list">
       <HomePageListItem
         v-for="product in products"
         :key="product.id"
@@ -10,7 +10,8 @@
           description: product.description,
           location: product.location,
           price: product.price,
-          id: product._id
+          id: product._id,
+          photo: product.photo
         }"
       />
     </ul>
@@ -22,15 +23,14 @@ export default {
   props: {
     products: {
       type: Array,
-      required: true,
-      default: []
+      required: true
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-.latest-products {
+.homepage-list {
   margin-top: 1rem;
 
   &__list {

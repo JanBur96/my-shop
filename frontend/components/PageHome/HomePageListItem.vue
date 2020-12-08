@@ -1,16 +1,16 @@
 <template>
   <nuxt-link :to="`/products/${this.id}`">
     <base-card>
-      <li class="latest-products__item">
+      <li class="homepage-item">
         <img
-          class="latest-products__item__image"
-          src="https://via.placeholder.com/150"
+          class="homepage-item__image"
+          :src="require(`~/assets/product-images/${photo}`)"
           :alt="`A picture of ${title}`"
         />
-        <div class="latest-products__item__text">
-          <h4 class="latest-products__item__title">{{ title }}</h4>
-          <div class="latest-products__item__row-2">
-            <p class="latest-products__item__location">{{ location }}</p>
+        <div class="homepage-item__text">
+          <h4 class="homepage-item__title">{{ title }}</h4>
+          <div class="homepage-item__informations">
+            <p class="homepage-item__location">{{ location }}</p>
             <p>{{ price }}€</p>
           </div>
         </div>
@@ -24,31 +24,31 @@ export default {
   props: {
     title: {
       type: String,
-      required: true,
-      default: false
+      required: true
     },
     description: {
       type: String,
-      required: true,
-      default: false
+      required: true
     },
     location: {
       type: String,
-      required: true,
-      default: false
+      required: true
     },
     price: {
       type: Number,
-      required: true,
-      default: false
+      required: true
     },
-    id: {}
+    id: {
+      type: String,
+      required: true
+    },
+    photo: {}
   }
 };
 </script>
 
 <style lang="scss" scoped>
-.latest-products__item {
+.homepage-item {
   height: 9rem;
   width: 100%;
   display: grid;
@@ -63,6 +63,7 @@ export default {
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+
   &__image {
     width: 100%;
     height: 100%;
@@ -72,7 +73,7 @@ export default {
     padding: 0.25rem;
   }
 
-  &__row-2 {
+  &__informations {
     display: flex;
     justify-content: space-between;
   }

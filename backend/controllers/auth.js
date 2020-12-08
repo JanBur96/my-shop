@@ -8,13 +8,19 @@ const User = require('../models/User');
 exports.register = asyncHandler(async (req, res, next) => {
   const { name, email, password, role } = req.body;
 
+  let user = await User.findOne({ email: email });
+
   // Create User
-  const user = await User.create({
-    name,
-    email,
-    password,
-    role,
-  });
+  if (!user) {
+    user = await User.create({
+      name,
+      email,
+      password,
+      role,
+    });
+  } else {
+    return next(new ErrorResponse(`The email ${email} is already taken`, 409));
+  }
 
   sendTokenResponse(user, 200, res);
 });

@@ -3,8 +3,7 @@
     <div class="col-1">
       <img
         class="my-profile__image"
-        src="https://via.placeholder.com/75
-      "
+        :src="require(`~/assets/product-images/${photo}`)"
         alt=""
       />
     </div>
@@ -12,8 +11,11 @@
       <div class="my-profile__row-1">
         <div class="my-profile__idk">
           <h5>{{ title }}</h5>
-          <nuxt-link :to="`/myprofile/${id}`"
-            ><fa class="my-profile__icon" :icon="['far', 'edit']"
+          <nuxt-link :to="`/users/myprofile/${id}`"
+            ><fa
+              v-if="mode === 'editable'"
+              class="my-profile__icon"
+              :icon="['far', 'edit']"
           /></nuxt-link>
         </div>
         <p>{{ price }}€</p>
@@ -30,8 +32,10 @@ export default {
     image: {},
     price: {},
     description: {},
-    id: {}
-  }
+    id: {},
+    photo: {}
+  },
+  inject: ["mode"]
 };
 </script>
 

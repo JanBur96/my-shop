@@ -38,7 +38,10 @@ export default {
           { set: "@fortawesome/free-regular-svg-icons", icons: ["faCompass"] },
           { set: "@fortawesome/free-regular-svg-icons", icons: ["faEdit"] },
           { set: "@fortawesome/free-regular-svg-icons", icons: ["faTrashAlt"] },
-          { set: "@fortawesome/free-solid-svg-icons", icons: ["faUserEdit"] }
+          { set: "@fortawesome/free-solid-svg-icons", icons: ["faUserEdit"] },
+          { set: "@fortawesome/free-solid-svg-icons", icons: ["faArrowRight"] },
+          { set: "@fortawesome/free-solid-svg-icons", icons: ["faArrowLeft"] },
+          { set: "@fortawesome/free-solid-svg-icons", icons: ["faSearch"] }
         ]
       }
     ]

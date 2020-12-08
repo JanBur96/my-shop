@@ -6,12 +6,12 @@
       <p v-if="!finishedFetch">Loading...</p>
       <base-card class="my-profile__card" v-else>
         <section class="my-profile__infos">
-          <MyProfilePageDetails
+          <PageProfileDetails
             :name="this.myProfile.name"
             :email="this.myProfile.email"
             :location="this.myProfile.location"
           />
-          <MyProfilePageProducts :products="this.myProfile.products" />
+          <PageProfileProducts :products="this.myProfile.products" />
         </section>
       </base-card>
     </base-container>
@@ -25,6 +25,9 @@ export default {
       myProfile: {},
       finishedFetch: false
     };
+  },
+  provide: {
+    mode: "editable"
   },
   async beforeMount() {
     const myProfile = await this.$axios.get("/auth/me");

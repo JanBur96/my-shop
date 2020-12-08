@@ -26,7 +26,7 @@
         </ul>
         <ul v-if="$auth.loggedIn" class="header__list header__list--col-3">
           <li class="header__item">
-            <nuxt-link to="/myprofile">My Profile</nuxt-link>
+            <nuxt-link to="/users/myprofile">My Profile</nuxt-link>
           </li>
           <li class="header__item">
             <nuxt-link to="/addproduct">Add Product</nuxt-link>
@@ -40,29 +40,38 @@
     <div class="header__row-2">
       <base-container mode="base-container-flex">
         <ul class="header__list">
-          <li class="header__item">
-            <nuxt-link to="/categories">Categories</nuxt-link>
+          <li class="header__item header__item--alt">
+            <nuxt-link to="/products/categories">Categories</nuxt-link>
           </li>
-          <li class="header__item">
-            <nuxt-link to="/technology">Technology</nuxt-link>
+          <li class="header__item header__item--alt">
+            <nuxt-link to="/products/categories/technology"
+              >Technology</nuxt-link
+            >
           </li>
-          <li class="header__item">
-            <nuxt-link to="/furniture">Furniture</nuxt-link>
+          <li class="header__item header__item--alt">
+            <nuxt-link to="/products/categories/furniture">Furniture</nuxt-link>
           </li>
-          <li class="header__item">
-            <nuxt-link to="/clothes">Clothes</nuxt-link>
+          <li class="header__item header__item--alt">
+            <nuxt-link to="/products/categories/clothes">Clothes</nuxt-link>
           </li>
-          <li class="header__item">
-            <nuxt-link to="/misc">Misc.</nuxt-link>
+          <li class="header__item header__item--alt">
+            <nuxt-link to="/products/categories/misc">Misc.</nuxt-link>
           </li>
         </ul>
-        <input
-          type="text"
-          placeholder="Search"
-          class="header__input"
-          @keyup.enter="search"
-          v-model="searchBy"
-        />
+        <div class="header__search">
+          <input
+            type="text"
+            placeholder="Search"
+            class="header__input"
+            @keyup.enter="search"
+            v-model="searchBy"
+          />
+          <fa
+            class="header__search-icon"
+            :icon="['fas', 'search']"
+            @click="search"
+          />
+        </div>
       </base-container>
     </div>
   </header>
@@ -122,8 +131,33 @@ export default {
   }
 
   &__item {
+    padding-top: 2px;
     margin-right: 1rem;
     cursor: pointer;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background: rgba($color: #000000, $alpha: 0.2);
+      transition: width 0.3s;
+    }
+
+    &:hover::after {
+      width: 100%;
+      transition: width 0.35s;
+    }
+
+    &--alt {
+      &::after {
+        background: rgba($color: #fff, $alpha: 0.8);
+      }
+    }
+  }
+
+  &__search {
+    position: relative;
   }
 
   &__input {
@@ -133,6 +167,14 @@ export default {
     border: 1px solid rgba($color: #000000, $alpha: 0.2);
     border-radius: 5px;
     outline-color: var(--main-color);
+  }
+
+  &__search-icon {
+    position: absolute;
+    color: var(--main-color);
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
   }
 }
 </style>

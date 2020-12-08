@@ -5,12 +5,12 @@
       <h3 class="my-profile__heading">{{ user.name }}'s Details</h3>
       <base-card class="my-profile__card">
         <section class="my-profile__infos">
-          <MyProfilePageDetails
+          <PageProfileDetails
             :name="user.name"
             :email="user.email"
             :location="user.location"
           />
-          <MyProfilePageProducts :products="user.products" />
+          <PageProfileProducts :products="user.products" />
         </section>
       </base-card>
     </base-container>
@@ -29,6 +29,9 @@ export default {
     user = user.data.data;
 
     return { user };
+  },
+  provide: {
+    mode: "uneditable"
   }
 };
 </script>
