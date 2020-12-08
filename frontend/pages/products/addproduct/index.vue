@@ -2,7 +2,7 @@
   <main class="add-product">
     <BaseHeader image="addproduct-header.jpg" heading="Add Product" />
     <h3 class="add-product__heading">Add a new product</h3>
-    <BaseProductForm @productAction="addProduct" mode="addProduct" />
+    <ProductForm @productAction="addProduct" mode="addProduct" />
   </main>
 </template>
 

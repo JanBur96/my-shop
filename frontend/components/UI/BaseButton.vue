@@ -10,15 +10,9 @@ export default {};
 
 <style lang="scss" scoped>
 .base-button {
+  height: 1.7rem;
   font-size: 1rem;
-  color: white;
-  background-color: var(--main-color);
-  border: none;
   border-radius: 5px;
-  outline-color: var(--main-color);
-
-  &:hover {
-    background-color: lighten($color: #8a3bc2, $amount: 10);
-  }
+  cursor: pointer;
 }
 </style>

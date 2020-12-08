@@ -1,12 +1,12 @@
 <template>
-  <div class="main__pagination">
-    <ul class="main__list">
-      <li class="main__item" v-if="prevPagination" @click="emitPrev">
-        <fa class="my-profile__icon" :icon="['fas', 'arrow-left']" />
+  <div class="pagination">
+    <ul class="pagination__list">
+      <li class="pagination__item" v-if="prevPagination" @click="emitPrev">
+        <fa class="pagination__icon" :icon="['fas', 'arrow-left']" />
       </li>
-      <li class="main__item">{{ page }}</li>
-      <li class="main__item" v-if="nextPagination" @click="emitNext">
-        <fa class="my-profile__icon" :icon="['fas', 'arrow-right']" />
+      <li class="pagination__item">{{ page }}</li>
+      <li class="pagination__item" v-if="nextPagination" @click="emitNext">
+        <fa class="pagination__icon" :icon="['fas', 'arrow-right']" />
       </li>
     </ul>
   </div>
@@ -36,7 +36,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.main {
+.pagination {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   &__list {
     display: flex;
   }
@@ -45,20 +50,13 @@ export default {
     width: 2rem;
     height: 2rem;
     margin: 0 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid rgba($color: #000000, $alpha: 0.2);
-    box-shadow: 0 0 2px 1px rgba($color: #000000, $alpha: 0.2);
     border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    box-shadow: 0 0 2px 1px rgba($color: #000000, $alpha: 0.2);
     cursor: pointer;
-  }
-
-  &__pagination {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
 </style>

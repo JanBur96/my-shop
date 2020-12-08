@@ -2,7 +2,7 @@
   <section class="all-categories">
     <h3 class="all-categories__heading">Categories</h3>
     <ul class="all-categories__list">
-      <CategoriesPageListItem
+      <PageCategoriesListItem
         v-for="category in categories"
         :key="category.title"
         :title="category.title"

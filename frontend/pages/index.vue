@@ -2,7 +2,7 @@
   <main class="main">
     <base-container>
       <BaseHeader image="home-header.jpg" heading="Welcome" />
-      <HomePageList :products="products" />
+      <BaseList :products="products" category="Latest Products" />
       <ListPagination
         @nextPage="nextPage"
         @prevPage="prevPage"

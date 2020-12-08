@@ -55,7 +55,7 @@ export default {
     border: 1px solid var(--main-color);
     color: var(--main-color);
     border-radius: 5px;
-    background-color: #fff;
+    background-color: white;
     font-size: 1rem;
   }
 }

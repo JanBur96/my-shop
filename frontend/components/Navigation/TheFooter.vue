@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <base-container class="footer__wrapper">
+    <base-container class="footer__container">
       <div class="footer__row-1">
         <p class="footer__logo">Logo</p>
       </div>
@@ -47,7 +47,7 @@ export default {};
 .footer {
   border-top: 1px solid rgba($color: #000000, $alpha: 0.2);
 
-  &__wrapper {
+  &__container {
     padding: 0 2rem;
     width: 100%;
     height: 10rem;

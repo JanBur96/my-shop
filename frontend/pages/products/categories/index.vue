@@ -2,7 +2,7 @@
   <main class="main">
     <base-container>
       <BaseHeader image="categories-header.jpg" heading="Categories" />
-      <CategoriesPageList :categories="categories" />
+      <PageCategoriesList :categories="categories" />
     </base-container>
   </main>
 </template>

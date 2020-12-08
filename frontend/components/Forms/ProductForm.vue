@@ -2,12 +2,12 @@
   <section class="product-form">
     <base-card class="product-form__card">
       <form action="" class="product-form__form">
-        <div class="product-form__form-control">
+        <base-form-control>
           <label for="">Title</label>
           <input class="product-form__input" v-model="title" type="text" />
-        </div>
+        </base-form-control>
         <div class="product-form__form-control--triple">
-          <div class="product-form__form-control">
+          <base-form-control>
             <label for="">Category</label>
             <select v-model="category" class="product-form__input">
               <option value="technology">Technology</option>
@@ -15,65 +15,65 @@
               <option value="clothes">Clothes</option>
               <option value="misc">Misc</option>
             </select>
-          </div>
-          <div class="product-form__form-control">
+          </base-form-control>
+          <base-form-control>
             <label for="">Location</label>
             <input class="product-form__input" v-model="location" type="text" />
-          </div>
-          <div class="product-form__form-control">
+          </base-form-control>
+          <base-form-control>
             <label for="">Price</label>
             <input class="product-form__input" v-model="price" type="text" />
-          </div>
+          </base-form-control>
         </div>
-        <div class="product-form__form-control">
+        <base-form-control>
           <label for="">Description</label>
           <textarea
             v-model="description"
-            class="product-form__input--alt"
+            class="product-form__input--area"
             rows="7"
           ></textarea>
-        </div>
-        <div class="product-form__image" v-if="mode === 'update'">
-          <div class="product-form__form-control">
+        </base-form-control>
+        <div class="product-form__image-upload" v-if="mode === 'update'">
+          <base-form-control>
             <label for="">Upload Image</label>
             <input type="file" name="" id="" @change="processFile($event)" />
-          </div>
-          <button
+          </base-form-control>
+          <base-button
             class="product-form__button"
             @click.prevent="emitProductAction('uploadImage')"
           >
             Upload
-          </button>
+          </base-button>
         </div>
 
-        <button
+        <base-button
           class="product-form__button"
           v-if="mode === 'update'"
           @click.prevent="emitProductAction('editProduct')"
         >
           Edit Product
-        </button>
-        <button
+        </base-button>
+        <base-button
           class="product-form__button"
           v-else
           @click.prevent="emitProductAction('addProduct')"
         >
           Add Product
-        </button>
+        </base-button>
       </form>
-      <div class="product-form__others" v-if="mode === 'update'">
-        <button
+      <div class="product-form__additional" v-if="mode === 'update'">
+        <base-button
           @click.prevent="emitProductAction('goBack')"
           class="product-form__button product-form__button--cancel"
         >
           Cancel
-        </button>
-        <button
+        </base-button>
+        <base-button
           @click.prevent="emitProductAction('deleteProduct')"
           class="product-form__button product-form__button--delete"
         >
           Delete
-        </button>
+        </base-button>
       </div>
     </base-card>
   </section>
@@ -133,20 +133,8 @@ export default {
 
 <style lang="scss" scoped>
 .product-form {
-  &__heading-3 {
-    margin-top: 1rem;
-    text-align: center;
-  }
-
   &__card {
     margin-top: 1rem;
-  }
-
-  &__form {
-    padding: 1rem;
-  }
-
-  &__card {
     width: 25rem;
     margin: 1rem auto 0 auto;
     padding: 1rem;
@@ -154,14 +142,10 @@ export default {
 
   &__form {
     width: 100%;
+    padding: 1rem;
   }
 
   &__form-control {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
-
     &--triple {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -171,58 +155,53 @@ export default {
 
   &__input {
     width: 100%;
-    margin-top: 0.2rem;
     height: 1.6rem;
+    margin-top: 0.2rem;
     padding-left: 0.25rem;
     border: 1px solid rgba($color: #000000, $alpha: 0.2);
     border-radius: 5px;
     outline-color: var(--main-color);
 
-    &--alt {
+    &--area {
       width: 100%;
-      margin-top: 0.2rem;
       height: unset;
-      padding-left: 0.25rem;
+      margin-top: 0.2rem;
+      padding: 0.25rem;
       border: 1px solid rgba($color: #000000, $alpha: 0.2);
       border-radius: 5px;
       font-family: inherit;
-      padding: 0.25rem;
     }
   }
 
+  &__image-upload {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
   &__button {
-    height: 1.7rem;
     width: 100%;
-    color: white;
+    color: #fff;
     background-color: var(--main-color);
     border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
 
     &--delete {
       background-color: red;
     }
 
     &--cancel {
+      color: var(--main-color);
       background-color: white;
       border: 1px solid var(--main-color);
-      color: var(--main-color);
     }
   }
 
-  &__others {
+  &__additional {
     width: 100%;
     padding: 0 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-  }
-
-  &__image {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
   }
 }
 </style>

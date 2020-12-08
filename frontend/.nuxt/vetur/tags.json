@@ -1,51 +1,27 @@
 {
-  "AddProductPageForm": {
-    "description": "Auto imported from components/PageAddProduct/AddProductPageForm.vue"
+  "ProductForm": {
+    "description": "Auto imported from components/Forms/ProductForm.vue"
   },
-  "LazyAddProductPageForm": {
-    "description": "Auto imported from components/PageAddProduct/AddProductPageForm.vue"
+  "LazyProductForm": {
+    "description": "Auto imported from components/Forms/ProductForm.vue"
   },
-  "CategoriesPageList": {
-    "description": "Auto imported from components/PageCategories/CategoriesPageList.vue"
+  "SignForm": {
+    "description": "Auto imported from components/Forms/SignForm.vue"
   },
-  "LazyCategoriesPageList": {
-    "description": "Auto imported from components/PageCategories/CategoriesPageList.vue"
+  "LazySignForm": {
+    "description": "Auto imported from components/Forms/SignForm.vue"
   },
-  "CategoriesPageListItem": {
-    "description": "Auto imported from components/PageCategories/CategoriesPageListItem.vue"
+  "PageCategoriesList": {
+    "description": "Auto imported from components/PageCategories/PageCategoriesList.vue"
   },
-  "LazyCategoriesPageListItem": {
-    "description": "Auto imported from components/PageCategories/CategoriesPageListItem.vue"
+  "LazyPageCategoriesList": {
+    "description": "Auto imported from components/PageCategories/PageCategoriesList.vue"
   },
-  "ListPagination": {
-    "description": "Auto imported from components/Navigation/ListPagination.vue"
+  "PageCategoriesListItem": {
+    "description": "Auto imported from components/PageCategories/PageCategoriesListItem.vue"
   },
-  "LazyListPagination": {
-    "description": "Auto imported from components/Navigation/ListPagination.vue"
-  },
-  "TheFooter": {
-    "description": "Auto imported from components/Navigation/TheFooter.vue"
-  },
-  "LazyTheFooter": {
-    "description": "Auto imported from components/Navigation/TheFooter.vue"
-  },
-  "TheHeader": {
-    "description": "Auto imported from components/Navigation/TheHeader.vue"
-  },
-  "LazyTheHeader": {
-    "description": "Auto imported from components/Navigation/TheHeader.vue"
-  },
-  "HomePageList": {
-    "description": "Auto imported from components/PageHome/HomePageList.vue"
-  },
-  "LazyHomePageList": {
-    "description": "Auto imported from components/PageHome/HomePageList.vue"
-  },
-  "HomePageListItem": {
-    "description": "Auto imported from components/PageHome/HomePageListItem.vue"
-  },
-  "LazyHomePageListItem": {
-    "description": "Auto imported from components/PageHome/HomePageListItem.vue"
+  "LazyPageCategoriesListItem": {
+    "description": "Auto imported from components/PageCategories/PageCategoriesListItem.vue"
   },
   "BaseButton": {
     "description": "Auto imported from components/UI/BaseButton.vue"
@@ -64,12 +40,6 @@
   },
   "LazyBaseContainer": {
     "description": "Auto imported from components/UI/BaseContainer.vue"
-  },
-  "BaseForm": {
-    "description": "Auto imported from components/UI/BaseForm.vue"
-  },
-  "LazyBaseForm": {
-    "description": "Auto imported from components/UI/BaseForm.vue"
   },
   "BaseFormControl": {
     "description": "Auto imported from components/UI/BaseFormControl.vue"
@@ -95,11 +65,23 @@
   "LazyBaseListItem": {
     "description": "Auto imported from components/UI/BaseListItem.vue"
   },
-  "BaseProductForm": {
-    "description": "Auto imported from components/UI/BaseProductForm.vue"
+  "ListPagination": {
+    "description": "Auto imported from components/Navigation/ListPagination.vue"
   },
-  "LazyBaseProductForm": {
-    "description": "Auto imported from components/UI/BaseProductForm.vue"
+  "LazyListPagination": {
+    "description": "Auto imported from components/Navigation/ListPagination.vue"
+  },
+  "TheFooter": {
+    "description": "Auto imported from components/Navigation/TheFooter.vue"
+  },
+  "LazyTheFooter": {
+    "description": "Auto imported from components/Navigation/TheFooter.vue"
+  },
+  "TheHeader": {
+    "description": "Auto imported from components/Navigation/TheHeader.vue"
+  },
+  "LazyTheHeader": {
+    "description": "Auto imported from components/Navigation/TheHeader.vue"
   },
   "PageProfileDetails": {
     "description": "Auto imported from components/PageProfile/PageMyProfile/PageProfileDetails.vue"

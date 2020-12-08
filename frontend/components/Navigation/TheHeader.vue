@@ -29,7 +29,7 @@
             <nuxt-link to="/users/myprofile">My Profile</nuxt-link>
           </li>
           <li class="header__item">
-            <nuxt-link to="/addproduct">Add Product</nuxt-link>
+            <nuxt-link to="/products/addproduct">Add Product</nuxt-link>
           </li>
           <li class="header__item" @click="$auth.logout()">
             Logout
@@ -99,9 +99,6 @@ export default {
   &__row-1 {
     height: 3.5rem;
     padding: 0 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
   &__container {
@@ -118,7 +115,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #fff;
+    color: white;
     background-color: var(--main-color);
   }
 
@@ -141,7 +138,7 @@ export default {
       width: 0;
       height: 2px;
       background: rgba($color: #000000, $alpha: 0.2);
-      transition: width 0.3s;
+      transition: width 0.35s;
     }
 
     &:hover::after {
@@ -155,7 +152,7 @@ export default {
 
     &--alt {
       &::after {
-        background: rgba($color: #fff, $alpha: 0.8);
+        background: rgba($color: white, $alpha: 0.8);
       }
     }
   }
@@ -175,9 +172,9 @@ export default {
 
   &__search-icon {
     position: absolute;
-    color: var(--main-color);
     right: 10px;
     top: 5px;
+    color: var(--main-color);
     cursor: pointer;
   }
 }

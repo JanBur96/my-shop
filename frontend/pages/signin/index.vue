@@ -3,7 +3,7 @@
     <base-container>
       <BaseHeader image="signin-header.jpg" heading="Sign In" />
       <h3 class="main__heading">Welcome back</h3>
-      <BaseForm mode="signin" @signAction="loginUser" />
+      <SignForm mode="signin" @signAction="loginUser" />
     </base-container>
   </main>
 </template>

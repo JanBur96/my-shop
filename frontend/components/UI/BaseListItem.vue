@@ -1,15 +1,15 @@
 <template>
-  <base-card>
+  <base-card class="base-item">
     <nuxt-link :to="`/products/${id}`">
-      <li class="categories__item">
+      <li class="base-item__item">
         <img
-          class="categories__image"
+          class="base-item__image"
           :src="require(`~/assets/product-images/${photo}`)"
           alt=""
         />
-        <div class="categories__text">
+        <div class="base-item__text">
           <h4>{{ title }}</h4>
-          <div class="categories__row-2">
+          <div class="base-item__row-2">
             <p>{{ location }}</p>
             <p>{{ price }}€</p>
           </div>
@@ -41,7 +41,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.categories {
+.base-item {
   &__item {
     height: 9rem;
     display: grid;

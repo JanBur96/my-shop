@@ -5,7 +5,7 @@
       <h3 class="edit-product__heading-3">
         Edit your product
       </h3>
-      <BaseProductForm
+      <ProductForm
         mode="update"
         @productAction="productAction"
         :product="product"

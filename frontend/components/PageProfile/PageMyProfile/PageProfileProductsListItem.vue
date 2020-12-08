@@ -12,7 +12,7 @@
         <div class="my-profile__row-1">
           <div class="my-profile__idk">
             <h5>{{ title }}</h5>
-            <nuxt-link :to="`/users/myprofile/${id}`"
+            <nuxt-link :to="`/products/editproduct/${id}`"
               ><fa
                 v-if="mode === 'editable'"
                 class="my-profile__icon"

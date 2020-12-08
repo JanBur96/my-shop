@@ -1,7 +1,7 @@
 <template>
-  <section class="categories">
-    <h3 class="categories__heading">{{ category }}</h3>
-    <ul class="categories__list">
+  <section class="base-list">
+    <h3 class="base-list__heading">{{ category }}</h3>
+    <ul class="base-list__list">
       <BaseListItem
         v-for="product in products"
         :key="product._id"
@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.categories {
+.base-list {
   &__heading {
     margin-top: 1rem;
   }
