@@ -149,6 +149,10 @@ export default {
       transition: width 0.35s;
     }
 
+    &:last-child {
+      margin-right: 0;
+    }
+
     &--alt {
       &::after {
         background: rgba($color: #fff, $alpha: 0.8);

@@ -2,7 +2,7 @@
   <section class="my-profile__details">
     <div class="my-profile__wrapper">
       <h4 class="my-profile__heading">
-        Your Details
+        {{ mode === "editable" ? "Your Details" : "Details" }}
         <fa
           v-if="mode === 'editable'"
           class="my-profile__icon--heading"
@@ -62,6 +62,16 @@
         </div>
       </div>
     </div>
+
+    <div
+      v-if="mode !== 'editable'"
+      class="my-profile__wrapper my-profile__wrapper-2"
+    >
+      <ul class="my-profile__list">
+        <li><button class="my-profile__button--alt">Message</button></li>
+        <li><button class="my-profile__button--alt">Follow</button></li>
+      </ul>
+    </div>
   </section>
 </template>
 
@@ -113,6 +123,9 @@ export default {
     background-color: var(--main-color);
     color: white;
     border-radius: 0 10px 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   &__input {
@@ -182,6 +195,22 @@ export default {
     font-size: 0.9rem;
     border-radius: 5px;
     cursor: pointer;
+
+    &--alt {
+      width: 100%;
+      height: 2rem;
+      color: var(--main-color);
+      border: 1px solid white;
+      border-radius: 5px;
+      background-color: white;
+      font-size: 1rem;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
   }
 }
 </style>
