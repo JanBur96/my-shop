@@ -28,16 +28,16 @@ export default {
       uploadedPicture: false
     };
   },
-  updated() {
-    if (this.uploadedPicture === true) {
-      this.$router.push("/users/myprofile");
-    }
-  },
+  // updated() {
+  //   if (this.uploadedPicture === true) {
+
+  //   }
+  // },
   methods: {
     async productAction(data) {
       if (data.type === "editProduct") {
         await this.$axios.put(
-          `/products/${this.$route.params.UpdateProduct}`,
+          `/products/${this.$route.params.update}`,
           {
             categories: data.category,
             title: data.title,
@@ -63,15 +63,17 @@ export default {
           }
         });
 
-        this.uploadedPicture = true;
+        setTimeout(() => {
+          this.$router.push("/users/myprofile");
+        }, 1500);
       }
     }
   },
-  async fetch() {
-    const id = this.$route.params.UpdateProduct;
-    this.id = id;
-    let product = await this.$axios.get(`/products/${id}`);
-    this.product = product.data.data;
+  async asyncData({ params, $axios }) {
+    let product = await $axios.get(`/products/${params.update}`);
+    product = product.data.data;
+
+    return { product };
   }
 };
 </script>
@@ -79,7 +81,6 @@ export default {
 <style lang="scss" scoped>
 .edit-product {
   &__heading-3 {
-    margin-top: 1rem;
     text-align: center;
   }
 

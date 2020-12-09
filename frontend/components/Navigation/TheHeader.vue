@@ -15,7 +15,9 @@
             </li>
           </ul>
         </nav>
-        <h1 class="header__logo">Logo</h1>
+        <nuxt-link to="/" class="header__link"
+          ><img class="header__logo" src="~/assets/images/logo.svg" alt=""
+        /></nuxt-link>
         <ul v-if="!$auth.loggedIn" class="header__list header__list--col-3">
           <li class="header__item">
             <nuxt-link to="/signin">Sign In</nuxt-link>
@@ -109,6 +111,10 @@ export default {
     text-align: center;
   }
 
+  &__link {
+    height: 3.5rem;
+  }
+
   &__row-2 {
     height: 2.5rem;
     padding: 0 2rem;
@@ -155,6 +161,12 @@ export default {
         background: rgba($color: white, $alpha: 0.8);
       }
     }
+  }
+
+  &__logo {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
   }
 
   &__search {

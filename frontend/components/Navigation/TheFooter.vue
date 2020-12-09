@@ -2,7 +2,7 @@
   <footer class="footer">
     <base-container class="footer__container">
       <div class="footer__row-1">
-        <p class="footer__logo">Logo</p>
+        <p class="footer__logo">LocalShop</p>
       </div>
       <div class="footer__row-2">
         <ul class="footer__list">
@@ -90,7 +90,6 @@ export default {};
       transition: all 0.35s;
     }
   }
-
   &__icons {
     text-align: right;
   }

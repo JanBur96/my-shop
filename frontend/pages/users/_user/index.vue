@@ -19,11 +19,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      finishedFetch: false
-    };
-  },
   async asyncData({ params, $axios }) {
     let user = await $axios.get(`/users/${params.user}`);
     user = user.data.data;
@@ -38,10 +33,6 @@ export default {
 
 <style lang="scss" scoped>
 .my-profile {
-  &__heading {
-    margin-top: 1rem;
-  }
-
   &__card {
     margin-top: 0.5rem;
   }

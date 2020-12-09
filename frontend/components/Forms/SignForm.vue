@@ -74,7 +74,6 @@ export default {
   padding: 1rem 2rem;
 
   &__heading {
-    margin-top: 1rem;
     text-align: center;
   }
 

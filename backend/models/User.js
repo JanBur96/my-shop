@@ -42,6 +42,22 @@ const UserSchema = new mongoose.Schema({
     required: false,
     default: 'No location available',
   },
+  rating: {
+    type: Number,
+    required: false,
+  },
+  follows: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+  },
+  follower: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+  },
+  wishlist: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Product',
+  },
 });
 
 // Encrypt password using bcrypt

@@ -32,7 +32,6 @@ export default {
 <style lang="scss" scoped>
 .main {
   &__heading {
-    margin-top: 1rem;
     text-align: center;
   }
 }

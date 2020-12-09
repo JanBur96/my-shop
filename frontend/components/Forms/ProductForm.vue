@@ -1,7 +1,7 @@
 <template>
   <section class="product-form">
     <base-card class="product-form__card">
-      <form action="" class="product-form__form">
+      <form class="product-form__form" action="" @submit.prevent>
         <base-form-control>
           <label for="">Title</label>
           <input class="product-form__input" v-model="title" type="text" />
@@ -35,45 +35,48 @@
         </base-form-control>
         <div class="product-form__image-upload" v-if="mode === 'update'">
           <base-form-control>
-            <label for="">Upload Image</label>
+            <label for="" :style="!fileValid ? 'color: red' : ''"
+              >Upload Image (Max. 1MB)</label
+            >
             <input type="file" name="" id="" @change="processFile($event)" />
           </base-form-control>
-          <base-button
+          <button
             class="product-form__button"
             @click.prevent="emitProductAction('uploadImage')"
+            :disabled="disabled"
           >
             Upload
-          </base-button>
+          </button>
         </div>
 
-        <base-button
+        <button
           class="product-form__button"
           v-if="mode === 'update'"
           @click.prevent="emitProductAction('editProduct')"
         >
           Edit Product
-        </base-button>
-        <base-button
+        </button>
+        <button
           class="product-form__button"
           v-else
           @click.prevent="emitProductAction('addProduct')"
         >
           Add Product
-        </base-button>
+        </button>
       </form>
       <div class="product-form__additional" v-if="mode === 'update'">
-        <base-button
+        <button
           @click.prevent="emitProductAction('goBack')"
           class="product-form__button product-form__button--cancel"
         >
           Cancel
-        </base-button>
-        <base-button
+        </button>
+        <button
           @click.prevent="emitProductAction('deleteProduct')"
           class="product-form__button product-form__button--delete"
         >
           Delete
-        </base-button>
+        </button>
       </div>
     </base-card>
   </section>
@@ -89,6 +92,8 @@ export default {
       location: "",
       price: "",
       file: "",
+      fileValid: true,
+      disabled: true,
       product: {}
     };
   },
@@ -100,9 +105,17 @@ export default {
   },
   methods: {
     processFile(event) {
-      this.file = event.target.files[0];
+      const file = event.target.files[0];
+      if (file.size > 100000) {
+        this.fileValid = false;
+      } else {
+        this.file = event.target.files[0];
+        this.fileValid = true;
+        this.disabled = false;
+      }
     },
     emitProductAction(type) {
+      console.log("Hi");
       const data = {
         type,
         categories: this.category,
@@ -117,7 +130,7 @@ export default {
   },
   async fetch() {
     if (this.$props.mode === "update") {
-      const id = this.$route.params.UpdateProduct;
+      const id = this.$route.params.update;
       let product = await this.$axios.get(`/products/${id}`);
       product = product.data.data;
 
@@ -134,7 +147,6 @@ export default {
 <style lang="scss" scoped>
 .product-form {
   &__card {
-    margin-top: 1rem;
     width: 25rem;
     margin: 1rem auto 0 auto;
     padding: 1rem;
@@ -181,6 +193,10 @@ export default {
 
   &__button {
     width: 100%;
+    height: 1.7rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
     color: #fff;
     background-color: var(--main-color);
     border: none;
@@ -193,6 +209,10 @@ export default {
       color: var(--main-color);
       background-color: white;
       border: 1px solid var(--main-color);
+    }
+
+    :disabled {
+      color: red;
     }
   }
 

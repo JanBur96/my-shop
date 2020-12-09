@@ -30,7 +30,6 @@ export default {
 <style lang="scss" scoped>
 .error {
   &__heading {
-    margin-top: 1rem;
     text-align: center;
   }
 

@@ -27,7 +27,6 @@ export default {
 <style lang="scss" scoped>
 .all-categories {
   &__heading {
-    margin-top: 1rem;
   }
 
   &__list {

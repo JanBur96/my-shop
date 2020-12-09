@@ -1,57 +1,59 @@
 <template>
   <main class="product">
-    <BaseHeader image="product-header.jpg" heading="The Product" />
-    <base-card class="product__card">
-      <img
-        class="product__image"
-        :src="require(`~/assets/product-images/${product.photo}`)"
-        alt=""
-      />
+    <base-container>
+      <BaseHeader image="product-header.jpg" heading="The Product" />
+      <base-card class="product__card">
+        <img
+          class="product__image"
+          :src="require(`~/assets/product-images/${product.photo}`)"
+          alt=""
+        />
 
-      <div class="product__information">
-        <div class="product__row-1">
-          <h3 class="product__header">{{ product.title }}</h3>
-          <p class="product__description">{{ product.description }}</p>
-        </div>
-        <div class="product__row-2">
-          <div class="product__upper">
-            <p>Location: {{ product.location }}</p>
-            <p>Price: {{ product.price }}€</p>
+        <div class="product__information">
+          <div class="product__row-1">
+            <h3 class="product__header">{{ product.title }}</h3>
+            <p class="product__description">{{ product.description }}</p>
           </div>
-          <div class="product__lower">
-            Uploaded by
-            <nuxt-link class="product__link" :to="`/users/${user._id}`">{{
-              user.name
-            }}</nuxt-link>
-            <ul class="product__list">
-              <li class="product__item">
-                {{ user.products.length }} Product/s Online
-              </li>
-              <li class="product__item">Rating: 4.5/5</li>
-            </ul>
+          <div class="product__row-2">
+            <div class="product__upper">
+              <p>Location: {{ product.location }}</p>
+              <p>Price: {{ product.price }}€</p>
+            </div>
+            <div class="product__lower">
+              Uploaded by
+              <nuxt-link class="product__link" :to="`/users/${user._id}`">{{
+                user.name
+              }}</nuxt-link>
+              <ul class="product__list">
+                <li class="product__item">
+                  {{ user.products.length }} Product/s Online
+                </li>
+                <li class="product__item">Rating: 4.5/5</li>
+              </ul>
+            </div>
           </div>
         </div>
+      </base-card>
+      <div class="product__action">
+        <ul class="product__list product__list--alt">
+          <li class="product__item product__item--alt">
+            <button class="product__button product__button--share">
+              <fa class="product__icon" :icon="['fas', 'share']" /> Share
+            </button>
+          </li>
+          <li class="product__item product__item--alt">
+            <button class="product__button product__button--wish">
+              <fa class="product__icon" :icon="['fas', 'gift']" /> Wishlist
+            </button>
+          </li>
+          <li class="product__item product__item--alt">
+            <button class="product__button product__button--contact">
+              <fa class="product__icon" :icon="['far', 'envelope']" /> Contact
+            </button>
+          </li>
+        </ul>
       </div>
-    </base-card>
-    <div class="product__action">
-      <ul class="product__list product__list--alt">
-        <li class="product__item product__item--alt">
-          <button class="product__button product__button--share">
-            <fa class="product__icon" :icon="['fas', 'share']" /> Share
-          </button>
-        </li>
-        <li class="product__item product__item--alt">
-          <button class="product__button product__button--wish">
-            <fa class="product__icon" :icon="['fas', 'gift']" /> Wishlist
-          </button>
-        </li>
-        <li class="product__item product__item--alt">
-          <button class="product__button product__button--contact">
-            <fa class="product__icon" :icon="['far', 'envelope']" /> Contact
-          </button>
-        </li>
-      </ul>
-    </div>
+    </base-container>
   </main>
 </template>
 

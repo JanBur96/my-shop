@@ -34,7 +34,6 @@ export default {
 <style lang="scss" scoped>
 .base-list {
   &__heading {
-    margin-top: 1rem;
     text-transform: capitalize;
   }
 

@@ -3,15 +3,14 @@
     <base-container>
       <BaseHeader image="myprofile-header.jpg" heading="My Profile" />
       <h3 class="my-profile__heading">Hello, {{ myProfile.name }}</h3>
-      <p v-if="!finishedFetch">Loading...</p>
-      <base-card class="my-profile__card" v-else>
+      <base-card class="my-profile__card">
         <section class="my-profile__infos">
           <PageProfileDetails
-            :name="this.myProfile.name"
-            :email="this.myProfile.email"
-            :location="this.myProfile.location"
+            :name="myProfile.name"
+            :email="myProfile.email"
+            :location="myProfile.location"
           />
-          <PageProfileProducts :products="this.myProfile.products" />
+          <PageProfileProducts :products="myProfile.products" mode="editable" />
         </section>
       </base-card>
     </base-container>
@@ -20,29 +19,20 @@
 
 <script>
 export default {
-  data() {
-    return {
-      myProfile: {},
-      finishedFetch: false
-    };
-  },
   provide: {
     mode: "editable"
   },
-  async beforeMount() {
-    const myProfile = await this.$axios.get("/auth/me");
-    this.myProfile = myProfile.data.data;
-    this.finishedFetch = true;
+  async asyncData({ $axios }) {
+    let myProfile = await $axios.get("/auth/me");
+    myProfile = myProfile.data.data;
+
+    return { myProfile };
   }
 };
 </script>
 
 <style lang="scss" scoped>
 .my-profile {
-  &__heading {
-    margin-top: 1rem;
-  }
-
   &__card {
     margin-top: 0.5rem;
   }

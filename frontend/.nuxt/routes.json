@@ -3,78 +3,91 @@
     "name": "faq",
     "path": "/faq",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/faq/index.vue",
-    "chunkName": "pages/faq/index"
+    "chunkName": "pages/faq/index",
+    "_name": "_622b119d"
   },
   {
     "name": "signin",
     "path": "/signin",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/signin/index.vue",
-    "chunkName": "pages/signin/index"
+    "chunkName": "pages/signin/index",
+    "_name": "_60fc8c5e"
   },
   {
     "name": "signup",
     "path": "/signup",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/signup/index.vue",
-    "chunkName": "pages/signup/index"
+    "chunkName": "pages/signup/index",
+    "_name": "_559edfc7"
   },
   {
     "name": "support",
     "path": "/support",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/support/index.vue",
-    "chunkName": "pages/support/index"
+    "chunkName": "pages/support/index",
+    "_name": "_122645d4"
   },
   {
     "name": "products-addproduct",
     "path": "/products/addproduct",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/products/addproduct/index.vue",
-    "chunkName": "pages/products/addproduct/index"
+    "chunkName": "pages/products/addproduct/index",
+    "_name": "_d6ec7500"
   },
   {
     "name": "products-categories",
     "path": "/products/categories",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/products/categories/index.vue",
-    "chunkName": "pages/products/categories/index"
+    "chunkName": "pages/products/categories/index",
+    "_name": "_7c52a624"
   },
   {
     "name": "users-myprofile",
     "path": "/users/myprofile",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/users/myprofile/index.vue",
-    "chunkName": "pages/users/myprofile/index"
+    "chunkName": "pages/users/myprofile/index",
+    "_name": "_64e57086"
   },
   {
     "name": "products-categories-categorie",
     "path": "/products/categories/:categorie",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/products/categories/_categorie/index.vue",
-    "chunkName": "pages/products/categories/_categorie/index"
+    "chunkName": "pages/products/categories/_categorie/index",
+    "_name": "_8c021062"
   },
   {
-    "name": "products-editproduct-UpdateProduct",
-    "path": "/products/editproduct/:UpdateProduct",
-    "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/products/editproduct/_UpdateProduct/index.vue",
-    "chunkName": "pages/products/editproduct/_UpdateProduct/index"
+    "name": "products-editproduct-update",
+    "path": "/products/editproduct/:update",
+    "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/products/editproduct/_update/index.vue",
+    "chunkName": "pages/products/editproduct/_update/index",
+    "_name": "_63ecaa42"
   },
   {
     "name": "products-search-search",
     "path": "/products/search/:search",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/products/search/_search/index.vue",
-    "chunkName": "pages/products/search/_search/index"
+    "chunkName": "pages/products/search/_search/index",
+    "_name": "_0290689c"
   },
   {
     "name": "products-product",
     "path": "/products/:product",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/products/_product/index.vue",
-    "chunkName": "pages/products/_product/index"
+    "chunkName": "pages/products/_product/index",
+    "_name": "_5b6b3342"
   },
   {
     "name": "users-user",
     "path": "/users/:user",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/users/_user/index.vue",
-    "chunkName": "pages/users/_user/index"
+    "chunkName": "pages/users/_user/index",
+    "_name": "_f5c65fac"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_0ca67b56"
   }
 ]

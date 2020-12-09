@@ -11,7 +11,7 @@ const _d6ec7500 = () => interopDefault(import('../pages/products/addproduct/inde
 const _7c52a624 = () => interopDefault(import('../pages/products/categories/index.vue' /* webpackChunkName: "pages/products/categories/index" */))
 const _64e57086 = () => interopDefault(import('../pages/users/myprofile/index.vue' /* webpackChunkName: "pages/users/myprofile/index" */))
 const _8c021062 = () => interopDefault(import('../pages/products/categories/_categorie/index.vue' /* webpackChunkName: "pages/products/categories/_categorie/index" */))
-const _c0d73ffa = () => interopDefault(import('../pages/products/editproduct/_UpdateProduct/index.vue' /* webpackChunkName: "pages/products/editproduct/_UpdateProduct/index" */))
+const _63ecaa42 = () => interopDefault(import('../pages/products/editproduct/_update/index.vue' /* webpackChunkName: "pages/products/editproduct/_update/index" */))
 const _0290689c = () => interopDefault(import('../pages/products/search/_search/index.vue' /* webpackChunkName: "pages/products/search/_search/index" */))
 const _5b6b3342 = () => interopDefault(import('../pages/products/_product/index.vue' /* webpackChunkName: "pages/products/_product/index" */))
 const _f5c65fac = () => interopDefault(import('../pages/users/_user/index.vue' /* webpackChunkName: "pages/users/_user/index" */))
@@ -66,9 +66,9 @@ export const routerOptions = {
     component: _8c021062,
     name: "products-categories-categorie"
   }, {
-    path: "/products/editproduct/:UpdateProduct",
-    component: _c0d73ffa,
-    name: "products-editproduct-UpdateProduct"
+    path: "/products/editproduct/:update",
+    component: _63ecaa42,
+    name: "products-editproduct-update"
   }, {
     path: "/products/search/:search",
     component: _0290689c,

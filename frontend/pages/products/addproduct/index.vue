@@ -1,8 +1,10 @@
 <template>
   <main class="add-product">
-    <BaseHeader image="addproduct-header.jpg" heading="Add Product" />
-    <h3 class="add-product__heading">Add a new product</h3>
-    <ProductForm @productAction="addProduct" mode="addProduct" />
+    <base-container>
+      <BaseHeader image="addproduct-header.jpg" heading="Add Product" />
+      <h3 class="add-product__heading">Add a new product</h3>
+      <ProductForm @productAction="addProduct" mode="addProduct" />
+    </base-container>
   </main>
 </template>
 
@@ -19,7 +21,6 @@ export default {
           location: data.location,
           price: data.price
         },
-        console.log(data),
         this.$router.push("/")
       );
     }
@@ -30,7 +31,6 @@ export default {
 <style lang="scss" scoped>
 .add-product {
   &__heading {
-    margin-top: 1rem;
     text-align: center;
   }
 }
