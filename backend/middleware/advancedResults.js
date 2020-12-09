@@ -36,12 +36,23 @@ const advancedResults = (model, populate) => async (req, res, next) => {
     query = query.sort('-createdAt');
   }
 
+  let category = query._conditions.categories;
+
+  if (category) {
+    category = Object.values(category);
+  }
+
   // Pagination
   const page = parseInt(req.query.page, 10) || 1;
   const limit = parseInt(req.query.limit, 10) || 100;
   const startIndex = (page - 1) * limit;
   const endIndex = page * limit;
-  const total = await model.countDocuments();
+  let total;
+  if (category) {
+    total = await model.countDocuments({ categories: category });
+  } else {
+    total = await model.countDocuments();
+  }
 
   // Skip certain amount of resources (startIndex gives us the right amount to skip) and limit it
   query = query.skip(startIndex).limit(limit);

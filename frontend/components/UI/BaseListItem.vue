@@ -8,7 +8,7 @@
           alt=""
         />
         <div class="base-item__text">
-          <h4>{{ title }}</h4>
+          <h4 class="base-item__title">{{ title }}</h4>
           <div class="base-item__row-2">
             <p>{{ location }}</p>
             <p>{{ price }}€</p>
@@ -42,6 +42,13 @@ export default {
 
 <style lang="scss" scoped>
 .base-item {
+  transition: 0.35s;
+
+  &:hover {
+    box-shadow: 0px 0px 4px 2px rgba($color: #000000, $alpha: 0.2);
+    transform: translateY(-2px);
+  }
+
   &__item {
     height: 9rem;
     display: grid;
@@ -55,6 +62,14 @@ export default {
 
   &__text {
     padding: 0.25rem;
+  }
+
+  &__title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 150px;
+    height: 1.2em;
+    white-space: nowrap;
   }
 
   &__row-2 {

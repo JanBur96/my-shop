@@ -10,10 +10,7 @@ const _122645d4 = () => interopDefault(import('../pages/support/index.vue' /* we
 const _d6ec7500 = () => interopDefault(import('../pages/products/addproduct/index.vue' /* webpackChunkName: "pages/products/addproduct/index" */))
 const _7c52a624 = () => interopDefault(import('../pages/products/categories/index.vue' /* webpackChunkName: "pages/products/categories/index" */))
 const _64e57086 = () => interopDefault(import('../pages/users/myprofile/index.vue' /* webpackChunkName: "pages/users/myprofile/index" */))
-const _545bbfe7 = () => interopDefault(import('../pages/products/categories/clothes/index.vue' /* webpackChunkName: "pages/products/categories/clothes/index" */))
-const _73f1ae11 = () => interopDefault(import('../pages/products/categories/furniture/index.vue' /* webpackChunkName: "pages/products/categories/furniture/index" */))
-const _095f85fa = () => interopDefault(import('../pages/products/categories/misc/index.vue' /* webpackChunkName: "pages/products/categories/misc/index" */))
-const _15c7efba = () => interopDefault(import('../pages/products/categories/technology/index.vue' /* webpackChunkName: "pages/products/categories/technology/index" */))
+const _8c021062 = () => interopDefault(import('../pages/products/categories/_categorie/index.vue' /* webpackChunkName: "pages/products/categories/_categorie/index" */))
 const _c0d73ffa = () => interopDefault(import('../pages/products/editproduct/_UpdateProduct/index.vue' /* webpackChunkName: "pages/products/editproduct/_UpdateProduct/index" */))
 const _0290689c = () => interopDefault(import('../pages/products/search/_search/index.vue' /* webpackChunkName: "pages/products/search/_search/index" */))
 const _5b6b3342 = () => interopDefault(import('../pages/products/_product/index.vue' /* webpackChunkName: "pages/products/_product/index" */))
@@ -65,21 +62,9 @@ export const routerOptions = {
     component: _64e57086,
     name: "users-myprofile"
   }, {
-    path: "/products/categories/clothes",
-    component: _545bbfe7,
-    name: "products-categories-clothes"
-  }, {
-    path: "/products/categories/furniture",
-    component: _73f1ae11,
-    name: "products-categories-furniture"
-  }, {
-    path: "/products/categories/misc",
-    component: _095f85fa,
-    name: "products-categories-misc"
-  }, {
-    path: "/products/categories/technology",
-    component: _15c7efba,
-    name: "products-categories-technology"
+    path: "/products/categories/:categorie",
+    component: _8c021062,
+    name: "products-categories-categorie"
   }, {
     path: "/products/editproduct/:UpdateProduct",
     component: _c0d73ffa,

@@ -87,7 +87,7 @@ export default {};
 
     &:hover {
       transform: scale(1.1) translateY(-2px);
-      transition: all 0.5s;
+      transition: all 0.35s;
     }
   }
 

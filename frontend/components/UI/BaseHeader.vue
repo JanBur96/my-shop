@@ -55,6 +55,7 @@ export default {
   &__heading {
     z-index: 100;
     text-shadow: 1px 1px rgba($color: #000000, $alpha: 0.2);
+    text-transform: capitalize;
   }
 }
 </style>

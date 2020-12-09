@@ -35,6 +35,7 @@ export default {
 .base-list {
   &__heading {
     margin-top: 1rem;
+    text-transform: capitalize;
   }
 
   &__list {

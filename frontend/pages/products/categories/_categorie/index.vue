@@ -1,8 +1,8 @@
 <template>
-  <main class="main">
+  <main>
     <base-container>
-      <BaseHeader image="home-header.jpg" heading="Welcome" />
-      <BaseList :products="products" category="Latest Products" />
+      <BaseHeader image="overview-technology.jpg" :heading="categorieName" />
+      <BaseList :category="categorieName" :products="products" />
       <ListPagination
         @nextPage="nextPage"
         @prevPage="prevPage"
@@ -19,6 +19,7 @@ export default {
   data() {
     return {
       products: [],
+      categorieName: "",
       page: 1,
       nextPagination: undefined,
       prevPagination: undefined
@@ -27,7 +28,8 @@ export default {
   methods: {
     async nextPage() {
       const fetch = await this.$axios.get(
-        `/products?page=${this.page + 1}&limit=20`
+        `/products?categories[in]=${this.categorieName}&page=${this.page +
+          1}&limit=20`
       );
       this.products = fetch.data.data;
       this.nextPagination = fetch.data.pagination.next;
@@ -37,7 +39,8 @@ export default {
     },
     async prevPage() {
       const fetch = await this.$axios.get(
-        `/products?page=${this.page - 1}&limit=20`
+        `/products?categories[in]=${this.categorieName}&page=${this.page -
+          1}&limit=20`
       );
       this.products = fetch.data.data;
       this.nextPagination = fetch.data.pagination.next;
@@ -46,9 +49,14 @@ export default {
     }
   },
   async fetch() {
-    const fetch = await this.$axios.get(`/products?page=1&limit=20`);
+    const fetch = await this.$axios.get(
+      `/products?categories[in]=${this.categorieName}&page=1&limit=20`
+    );
     this.products = fetch.data.data;
     this.nextPagination = fetch.data.pagination.next;
+  },
+  created() {
+    this.categorieName = this.$route.params.categorie;
   }
 };
 </script>

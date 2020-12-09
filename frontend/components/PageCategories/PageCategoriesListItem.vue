@@ -55,6 +55,7 @@ export default {
 
   &:hover {
     box-shadow: 0px 0px 6px 2px rgba($color: #000000, $alpha: 0.4);
+    transform: translateY(-2px);
   }
 
   &__link {
