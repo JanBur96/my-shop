@@ -61,4 +61,8 @@ main {
   padding: 1.5rem 2rem;
   min-height: 45.2rem;
 }
+
+.text-danger {
+  color: red;
+}
 </style>

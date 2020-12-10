@@ -28,11 +28,6 @@ export default {
       uploadedPicture: false
     };
   },
-  // updated() {
-  //   if (this.uploadedPicture === true) {
-
-  //   }
-  // },
   methods: {
     async productAction(data) {
       if (data.type === "editProduct") {
@@ -48,7 +43,7 @@ export default {
           this.$router.push("/users/myprofile")
         );
       } else if (data.type === "deleteProduct") {
-        await this.$axios.delete(`/products/${this.id}`);
+        await this.$axios.delete(`/products/${this.$route.params.update}`);
         this.$router.push("/users/myprofile");
       } else if (data.type === "goBack") {
         this.$router.push("/users/myprofile");
@@ -57,11 +52,15 @@ export default {
 
         formData.append("file", data.file);
 
-        await this.$axios.put(`/products/${this.id}/photo`, formData, {
-          headers: {
-            "Content-Type": "multipart/form-data"
+        await this.$axios.put(
+          `/products/${this.$route.params.update}/photo`,
+          formData,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data"
+            }
           }
-        });
+        );
 
         setTimeout(() => {
           this.$router.push("/users/myprofile");

@@ -21,7 +21,7 @@
         </ul>
       </div>
       <div class="footer__row-3">
-        <p>Copyright 2020 by Name</p>
+        <p>&copy; 2020 by LocalShop</p>
         <ul class="footer__list">
           <li class="footer__item">
             <fa class="footer__icon" :icon="['fab', 'facebook']" />
@@ -33,7 +33,7 @@
             <fa class="footer__icon" :icon="['fab', 'instagram']" />
           </li>
         </ul>
-        <p class="footer__icons">Icons by Font Awesome</p>
+        <p class="footer__fontawesome">Icons by Font Awesome</p>
       </div>
     </base-container>
   </footer>
@@ -63,6 +63,7 @@ export default {};
   &__row-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    align-items: center;
   }
 
   &__logo {
@@ -90,7 +91,8 @@ export default {};
       transition: all 0.35s;
     }
   }
-  &__icons {
+
+  &__fontawesome {
     text-align: right;
   }
 }

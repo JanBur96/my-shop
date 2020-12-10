@@ -56,6 +56,9 @@ export default {
     border: 1px solid rgba($color: #000000, $alpha: 0.2);
     border-radius: 5px;
     box-shadow: 0 0 2px 1px rgba($color: #000000, $alpha: 0.2);
+  }
+
+  &__icon {
     cursor: pointer;
   }
 }

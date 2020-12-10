@@ -15,8 +15,11 @@
             </li>
           </ul>
         </nav>
-        <nuxt-link to="/" class="header__link"
-          ><img class="header__logo" src="~/assets/images/logo.svg" alt=""
+        <nuxt-link to="/" class="header__logo-link"
+          ><img
+            class="header__logo"
+            src="~/assets/images/logo.svg"
+            alt="Picture of the Logo from LocalShop"
         /></nuxt-link>
         <ul v-if="!$auth.loggedIn" class="header__list header__list--col-3">
           <li class="header__item">
@@ -67,6 +70,7 @@
             class="header__input"
             @keyup.enter="search"
             v-model="searchBy"
+            required
           />
           <fa
             class="header__search-icon"
@@ -83,14 +87,15 @@
 export default {
   data() {
     return {
-      isAuth: false,
-      searchBy: ""
+      searchBy: undefined
     };
   },
   methods: {
     search() {
-      this.$router.push(`/products/search/${this.searchBy}`);
-      this.searchBy = "";
+      if (this.searchBy) {
+        this.$router.push(`/products/search/${this.searchBy}`);
+        this.searchBy = "";
+      }
     }
   }
 };
@@ -103,18 +108,6 @@ export default {
     padding: 0 2rem;
   }
 
-  &__container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  &__link {
-    height: 3.5rem;
-  }
-
   &__row-2 {
     height: 2.5rem;
     padding: 0 2rem;
@@ -123,6 +116,14 @@ export default {
     justify-content: space-between;
     color: white;
     background-color: var(--main-color);
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   &__list {
@@ -138,6 +139,10 @@ export default {
     margin-right: 1rem;
     cursor: pointer;
 
+    &:last-child {
+      margin-right: 0;
+    }
+
     &::after {
       content: "";
       display: block;
@@ -152,10 +157,6 @@ export default {
       transition: width 0.35s;
     }
 
-    &:last-child {
-      margin-right: 0;
-    }
-
     &--alt {
       &::after {
         background: rgba($color: white, $alpha: 0.8);
@@ -167,6 +168,10 @@ export default {
     width: 100%;
     height: 100%;
     padding: 0.5rem;
+  }
+
+  &__logo-link {
+    height: 3.5rem;
   }
 
   &__search {

@@ -1,43 +1,81 @@
 <template>
-  <base-card class="sign-form">
-    <form action="" class="sign-form__form" @submit.prevent="emitRegisterUser">
-      <base-form-control v-if="mode === 'signup'">
-        <label for="" class="sign-form__label">Full Name</label>
-        <input type="text" class="sign-form__input" v-model="fullName" />
-      </base-form-control>
-      <base-form-control>
-        <label for="" class="sign-form__label">Email</label>
-        <input type="text" class="sign-form__input" v-model="email" />
-      </base-form-control>
-      <base-form-control>
-        <label for="" class="sign-form__label">Password</label>
-        <input type="text" class="sign-form__input" v-model="password" />
-      </base-form-control>
-      <base-form-control v-if="mode === 'signup'">
-        <label for="" class="sign-form__label">Repeat Password</label>
-        <input type="text" class="sign-form__input" v-model="repeatPassword" />
-      </base-form-control>
-      <base-button class="sign-form__button" v-if="mode === 'signup'"
-        >Register</base-button
-      >
-      <base-button class="sign-form__button" v-else>Login</base-button>
-    </form>
-    <div class="sign-form__social-login">
-      <p>or</p>
-      <ul class="sign-form__list">
-        <li class="sign-form__item">
-          <fa class="sign-form__icon" :icon="['fab', 'facebook']" />
-        </li>
-        <li class="sign-form__item">
-          <fa class="sign-form__icon" :icon="['fab', 'google']" />
-        </li>
-      </ul>
-    </div>
-    <div class="sign-form__support">
-      <nuxt-link to="forgotpassword">Forgot Password?</nuxt-link>
-      <nuxt-link to="faq">Need help?</nuxt-link>
-    </div>
-  </base-card>
+  <section class="sign-form">
+    <base-card class="sign-form__card">
+      <form class="sign-form__form" @submit.prevent="emitRegisterUser">
+        <base-form-control v-if="mode === 'signup'">
+          <label for="name" class="sign-form__label">Full Name</label>
+          <input
+            name="name"
+            type="text"
+            class="sign-form__input"
+            v-model="fullName"
+            required
+          />
+        </base-form-control>
+        <base-form-control>
+          <label for="email" class="sign-form__label">Email</label>
+          <input
+            name="email"
+            type="email"
+            class="sign-form__input"
+            v-model="email"
+            required
+          />
+        </base-form-control>
+        <base-form-control>
+          <label
+            for="password"
+            class="sign-form__label"
+            :class="{ 'text-danger': !repeatPasswordCheck }"
+            >Password</label
+          >
+          <input
+            name="password"
+            type="password"
+            class="sign-form__input"
+            v-model="password"
+            required
+            minlength="8"
+          />
+        </base-form-control>
+        <base-form-control v-if="mode === 'signup'">
+          <label
+            for="repeatPassword"
+            class="sign-form__label"
+            :class="{ 'text-danger': !repeatPasswordCheck }"
+            >Repeat Password</label
+          >
+          <input
+            name="repeatPassword"
+            type="password"
+            class="sign-form__input"
+            v-model="repeatPassword"
+            required
+            minlength="8"
+          />
+        </base-form-control>
+        <base-button class="sign-form__button" v-if="mode === 'signup'"
+          >Register</base-button
+        >
+        <base-button class="sign-form__button" v-else>Login</base-button>
+      </form>
+      <div class="sign-form__social-login">
+        <p>or</p>
+        <ul class="sign-form__list">
+          <li class="sign-form__item">
+            <fa class="sign-form__icon" :icon="['fab', 'facebook']" />
+          </li>
+          <li class="sign-form__item">
+            <fa class="sign-form__icon" :icon="['fab', 'google']" />
+          </li>
+        </ul>
+      </div>
+      <div class="sign-form__support">
+        <nuxt-link to="forgotpassword">Forgot Password?</nuxt-link>
+        <nuxt-link to="faq">Need help?</nuxt-link>
+      </div>
+    </base-card>
+  </section>
 </template>
 
 <script>
@@ -50,18 +88,33 @@ export default {
       fullName: "",
       email: "",
       password: "",
-      repeatPassword: ""
+      repeatPassword: "",
+      repeatPasswordCheck: true
     };
   },
   methods: {
     emitRegisterUser() {
-      const data = {
-        fullName: this.fullName,
-        email: this.email,
-        password: this.password,
-        repeatPassword: this.repeatPassword
-      };
-      this.$emit("signAction", data);
+      if (this.$props.mode === "signup") {
+        if (this.password === this.repeatPassword) {
+          const data = {
+            fullName: this.fullName,
+            email: this.email,
+            password: this.password,
+            repeatPassword: this.repeatPassword
+          };
+          this.$emit("signAction", data);
+        } else {
+          this.repeatPasswordCheck = false;
+        }
+      } else {
+        const data = {
+          fullName: this.fullName,
+          email: this.email,
+          password: this.password,
+          repeatPassword: this.repeatPassword
+        };
+        this.$emit("signAction", data);
+      }
     }
   }
 };
@@ -69,9 +122,11 @@ export default {
 
 <style lang="scss" scoped>
 .sign-form {
-  width: 20rem;
-  margin: 1.5rem auto 1.5rem auto;
-  padding: 1rem 2rem;
+  &__card {
+    width: 20rem;
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+  }
 
   &__heading {
     text-align: center;
@@ -98,9 +153,15 @@ export default {
   &__button {
     width: 100%;
     height: 1.6rem;
+    margin-top: 0.2rem;
     color: white;
     background-color: var(--main-color);
     border: none;
+    transition: 0.35s;
+
+    &:hover {
+      opacity: 0.9;
+    }
   }
 
   &__social-login {
@@ -114,6 +175,12 @@ export default {
   &__icon {
     font-size: 1.8rem;
     color: var(--main-color);
+    cursor: pointer;
+    transition: 0.35s;
+
+    &:hover {
+      opacity: 0.9;
+    }
   }
 
   &__list {

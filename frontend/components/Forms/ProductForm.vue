@@ -6,7 +6,7 @@
           <label for="">Title</label>
           <input class="product-form__input" v-model="title" type="text" />
         </base-form-control>
-        <div class="product-form__form-control--triple">
+        <div class="product-form__form-control--3-col">
           <base-form-control>
             <label for="">Category</label>
             <select v-model="category" class="product-form__input">
@@ -115,7 +115,6 @@ export default {
       }
     },
     emitProductAction(type) {
-      console.log("Hi");
       const data = {
         type,
         categories: this.category,
@@ -148,17 +147,16 @@ export default {
 .product-form {
   &__card {
     width: 25rem;
-    margin: 1rem auto 0 auto;
-    padding: 1rem;
+    margin: 1rem auto;
+    padding: 1.25rem 2rem;
   }
 
   &__form {
     width: 100%;
-    padding: 1rem;
   }
 
   &__form-control {
-    &--triple {
+    &--3-col {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
@@ -192,6 +190,7 @@ export default {
   }
 
   &__button {
+    margin-top: 0.2rem;
     width: 100%;
     height: 1.7rem;
     font-size: 1rem;
@@ -218,7 +217,7 @@ export default {
 
   &__additional {
     width: 100%;
-    padding: 0 1rem;
+    margin-top: 0.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
