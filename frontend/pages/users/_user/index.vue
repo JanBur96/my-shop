@@ -33,10 +33,6 @@ export default {
 
 <style lang="scss" scoped>
 .my-profile {
-  &__card {
-    margin-top: 0.5rem;
-  }
-
   &__infos {
     display: grid;
     grid-template-columns: 1fr 3fr;

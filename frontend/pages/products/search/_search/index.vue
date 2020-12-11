@@ -13,7 +13,6 @@ export default {
   async asyncData({ params, $axios }) {
     let products = await $axios.get(`/products/search/${params.search}`);
     products = products.data.data;
-    console.log(products);
 
     return { products };
   }

@@ -45,6 +45,8 @@ export default {};
 
 <style lang="scss" scoped>
 .footer {
+  height: 15vh;
+  min-height: 10rem;
   border-top: 1px solid rgba($color: #000000, $alpha: 0.2);
 
   &__container {
@@ -81,8 +83,8 @@ export default {};
   }
 
   &__icon {
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
     color: var(--main-color);
     cursor: pointer;
 
@@ -95,5 +97,8 @@ export default {};
   &__fontawesome {
     text-align: right;
   }
+}
+
+@media (max-width: 768px) {
 }
 </style>

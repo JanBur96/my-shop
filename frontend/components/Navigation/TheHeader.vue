@@ -15,12 +15,7 @@
             </li>
           </ul>
         </nav>
-        <nuxt-link to="/" class="header__logo-link"
-          ><img
-            class="header__logo"
-            src="~/assets/images/logo.svg"
-            alt="Picture of the Logo from LocalShop"
-        /></nuxt-link>
+        <nuxt-link to="/" class="header__logo"><h1>LocalShop</h1></nuxt-link>
         <ul v-if="!$auth.loggedIn" class="header__list header__list--col-3">
           <li class="header__item">
             <nuxt-link to="/signin">Sign In</nuxt-link>
@@ -31,7 +26,7 @@
         </ul>
         <ul v-if="$auth.loggedIn" class="header__list header__list--col-3">
           <li class="header__item">
-            <nuxt-link to="/users/myprofile">My Profile</nuxt-link>
+            <nuxt-link to="/users/myprofile">Profile</nuxt-link>
           </li>
           <li class="header__item">
             <nuxt-link to="/products/addproduct">Add Product</nuxt-link>
@@ -40,6 +35,10 @@
             Logout
           </li>
         </ul>
+        <TheSidenavToggle
+          class="header__toggle"
+          @toggle="$emit('sidenavToggle')"
+        />
       </base-container>
     </div>
     <div class="header__row-2">
@@ -136,7 +135,7 @@ export default {
 
   &__item {
     padding-top: 2px;
-    margin-right: 1rem;
+    margin-right: 0.75rem;
     cursor: pointer;
 
     &:last-child {
@@ -193,6 +192,35 @@ export default {
     top: 5px;
     color: var(--main-color);
     cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__row-1 {
+      border-bottom: 1px solid var(--main-color);
+    }
+
+    &__container {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__logo {
+      justify-self: flex-start;
+      text-align: left;
+    }
+
+    &__nav {
+      display: none;
+    }
+
+    &__row-2 {
+      display: none;
+    }
+
+    &__list {
+      display: none;
+    }
   }
 }
 </style>

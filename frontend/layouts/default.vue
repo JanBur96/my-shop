@@ -1,10 +1,21 @@
 <template>
   <div>
-    <TheHeader />
+    <TheHeader @sidenavToggle="displaySidenav = !displaySidenav" />
+    <TheSidenav :show="displaySidenav" @close="displaySidenav = false" />
     <Nuxt />
     <TheFooter />
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      displaySidenav: false
+    };
+  }
+};
+</script>
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
@@ -41,6 +52,7 @@ h4 {
 
 h3 {
   font-size: 1.8rem;
+  margin: 1rem 0 0.5rem 0;
 }
 
 ul {
@@ -59,10 +71,33 @@ a {
 
 main {
   padding: 1.5rem 2rem;
-  min-height: 45.2rem;
+  height: 100%;
+  min-height: 85vh;
 }
 
 .text-danger {
   color: red;
+}
+
+@media (max-width: 580px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 70%;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 330px) {
+  html {
+    font-size: 50%;
+  }
 }
 </style>

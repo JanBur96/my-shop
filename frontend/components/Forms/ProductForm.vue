@@ -2,6 +2,9 @@
   <section class="product-form">
     <base-card class="product-form__card">
       <form class="product-form__form" action="" @submit.prevent>
+        <p class="product-form__forgot-something" v-if="forgotSomething">
+          You forgot something!
+        </p>
         <base-form-control>
           <label for="">Title</label>
           <input class="product-form__input" v-model="title" type="text" />
@@ -22,7 +25,12 @@
           </base-form-control>
           <base-form-control>
             <label for="">Price</label>
-            <input class="product-form__input" v-model="price" type="text" />
+            <input
+              class="product-form__input"
+              v-model="price"
+              type="number"
+              required
+            />
           </base-form-control>
         </div>
         <base-form-control>
@@ -38,7 +46,13 @@
             <label for="" :style="!fileValid ? 'color: red' : ''"
               >Upload Image (Max. 1MB)</label
             >
-            <input type="file" name="" id="" @change="processFile($event)" />
+            <input
+              type="file"
+              name=""
+              id=""
+              @change="processFile($event)"
+              class="product-form__input--file"
+            />
           </base-form-control>
           <button
             class="product-form__button"
@@ -93,8 +107,8 @@ export default {
       price: "",
       file: "",
       fileValid: true,
-      disabled: true,
-      product: {}
+      product: {},
+      forgotSomething: false
     };
   },
   props: {
@@ -106,7 +120,7 @@ export default {
   methods: {
     processFile(event) {
       const file = event.target.files[0];
-      if (file.size > 100000) {
+      if (file.size > 1000000) {
         this.fileValid = false;
       } else {
         this.file = event.target.files[0];
@@ -115,16 +129,34 @@ export default {
       }
     },
     emitProductAction(type) {
-      const data = {
-        type,
-        categories: this.category,
-        title: this.title,
-        description: this.description,
-        location: this.location,
-        price: this.price,
-        file: this.file
+      const checkForm = () => {
+        if (
+          this.price > 0 &&
+          this.location &&
+          this.title &&
+          this.category &&
+          this.description &&
+          this.category
+        ) {
+          return true;
+        } else {
+          this.forgotSomething = true;
+          return false;
+        }
       };
-      this.$emit("productAction", data);
+
+      if (checkForm()) {
+        const data = {
+          type,
+          categories: this.category,
+          title: this.title,
+          description: this.description,
+          location: this.location,
+          price: this.price,
+          file: this.file
+        };
+        this.$emit("productAction", data);
+      }
     }
   },
   async fetch() {
@@ -166,6 +198,7 @@ export default {
   &__input {
     width: 100%;
     height: 1.6rem;
+    font-size: 1rem;
     margin-top: 0.2rem;
     padding-left: 0.25rem;
     border: 1px solid rgba($color: #000000, $alpha: 0.2);
@@ -175,6 +208,7 @@ export default {
     &--area {
       width: 100%;
       height: unset;
+      font-size: 1rem;
       margin-top: 0.2rem;
       padding: 0.25rem;
       border: 1px solid rgba($color: #000000, $alpha: 0.2);
@@ -221,6 +255,31 @@ export default {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+  }
+
+  &__forgot-something {
+    margin-bottom: 0.5rem;
+    text-align: center;
+    padding: 0.2rem;
+    border-radius: 5px;
+    color: white;
+    background: red;
+  }
+}
+
+@media (max-width: 580px) {
+  .product-form {
+    &__card {
+      width: 80%;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .product-form {
+    &__card {
+      width: 80%;
+    }
   }
 }
 </style>

@@ -62,12 +62,9 @@ export default {
   async asyncData({ params, $axios }) {
     let product = await $axios.get(`/products/${params.product}`);
     product = product.data.data;
-    console.log(product);
 
     let user = await $axios.get(`/users/${product.user}`);
     user = user.data.data;
-
-    console.log(user.products.length);
 
     return { product, user };
   }
@@ -161,6 +158,18 @@ export default {
 
   &__icon {
     margin-right: 0.25rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .product {
+    &__card {
+      height: 100%;
+      display: grid;
+      margin-top: 2rem;
+      grid-template-columns: unset;
+      grid-template-rows: 1fr 1fr;
+    }
   }
 }
 </style>

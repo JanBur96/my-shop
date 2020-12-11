@@ -26,15 +26,21 @@ export default {
 
 <style lang="scss" scoped>
 .all-categories {
-  &__heading {
-  }
-
   &__list {
     height: 27.5rem;
-    margin-top: 0.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .all-categories {
+    &__list {
+      height: 40rem;
+      grid-template-columns: unset;
+      grid-template-rows: repeat(4, 1fr);
+    }
   }
 }
 </style>

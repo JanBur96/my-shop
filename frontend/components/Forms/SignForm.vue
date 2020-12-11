@@ -143,6 +143,7 @@ export default {
   &__input {
     width: 100%;
     height: 1.6rem;
+    font-size: 1rem;
     margin-top: 0.2rem;
     padding-left: 0.25rem;
     border: 1px solid rgba($color: #000000, $alpha: 0.2);

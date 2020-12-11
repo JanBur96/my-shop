@@ -1,9 +1,9 @@
 <template>
-  <section class="my-profile__products">
-    <h4 v-if="mode === 'editable'" class="my-profile__heading">
+  <section class="profile__products">
+    <h4 v-if="mode === 'editable'" class="profile__heading">
       Your products
     </h4>
-    <h4 v-else class="my-profile__heading">Products</h4>
+    <h4 v-else class="profile__heading">Products</h4>
     <PageProfileProductsList :products="products" />
   </section>
 </template>
@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.my-profile {
+.profile {
   &__products {
     padding: 0.5rem;
   }

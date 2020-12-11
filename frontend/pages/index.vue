@@ -33,7 +33,6 @@ export default {
       this.nextPagination = fetch.data.pagination.next;
       this.prevPagination = fetch.data.pagination.prev;
       this.page += 1;
-      console.log(this.nextPagination, this.prevPagination);
     },
     async prevPage() {
       const fetch = await this.$axios.get(
