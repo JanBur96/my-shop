@@ -164,11 +164,41 @@ export default {
 @media (max-width: 450px) {
   .product {
     &__card {
+      height: 50rem;
+      display: grid;
+      margin-top: 2rem;
+      grid-template-columns: unset;
+      grid-template-rows: 1fr 2fr;
+    }
+
+    &__image {
+      width: 100%;
       height: 100%;
+      border-radius: 0 0 5px 5px;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .product {
+    &__card {
+      height: 30rem;
       display: grid;
       margin-top: 2rem;
       grid-template-columns: unset;
       grid-template-rows: 1fr 1fr;
+    }
+
+    &__information {
+      grid-template-rows: 1fr 1fr;
+    }
+
+    &__row-2 {
+      grid-template-rows: 0.5fr 1fr;
+    }
+
+    &__header {
+      margin-top: 0;
     }
   }
 }

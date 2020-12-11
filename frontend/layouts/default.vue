@@ -90,14 +90,9 @@ main {
     font-size: 70%;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 360px) {
   html {
-    font-size: 55%;
-  }
-}
-@media (max-width: 330px) {
-  html {
-    font-size: 50%;
+    font-size: 60%;
   }
 }
 </style>

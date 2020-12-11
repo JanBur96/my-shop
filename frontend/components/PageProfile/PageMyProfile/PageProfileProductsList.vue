@@ -24,10 +24,20 @@ export default {
 <style lang="scss" scoped>
 .my-profile {
   &__list {
-    max-height: 360px;
+    max-height: 23rem;
     margin-top: 0.5rem;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     overflow-y: auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .my-profile {
+    &__list {
+      max-height: 28rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--main-color);
+    }
   }
 }
 </style>

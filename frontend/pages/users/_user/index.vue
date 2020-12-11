@@ -38,4 +38,13 @@ export default {
     grid-template-columns: 1fr 3fr;
   }
 }
+
+@media (max-width: 450px) {
+  .my-profile {
+    &__infos {
+      grid-template-columns: unset;
+      grid-template-rows: 1fr 2fr;
+    }
+  }
+}
 </style>

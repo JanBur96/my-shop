@@ -7,10 +7,10 @@
       <div class="footer__row-2">
         <ul class="footer__list">
           <li class="footer__item">
-            Terms of Service
+            Terms
           </li>
           <li class="footer__item">
-            Privacy Policy
+            Privacy
           </li>
           <li class="footer__item">
             Security
@@ -45,8 +45,6 @@ export default {};
 
 <style lang="scss" scoped>
 .footer {
-  height: 15vh;
-  min-height: 10rem;
   border-top: 1px solid rgba($color: #000000, $alpha: 0.2);
 
   &__container {
@@ -100,5 +98,10 @@ export default {};
 }
 
 @media (max-width: 768px) {
+  .footer {
+    &__container {
+      height: 8rem;
+    }
+  }
 }
 </style>

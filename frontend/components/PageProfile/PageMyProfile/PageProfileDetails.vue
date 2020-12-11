@@ -207,4 +207,12 @@ export default {
     gap: 1rem;
   }
 }
+
+@media (max-width: 450px) {
+  .profile {
+    &__details {
+      border-radius: 0 0 10px 10px;
+    }
+  }
+}
 </style>

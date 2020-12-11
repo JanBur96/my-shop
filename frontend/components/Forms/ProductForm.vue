@@ -215,11 +215,15 @@ export default {
       border-radius: 5px;
       font-family: inherit;
     }
+
+    &--file {
+      width: 100%;
+    }
   }
 
   &__image-upload {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 0.5fr;
     align-items: center;
   }
 
@@ -278,7 +282,7 @@ export default {
 @media (max-width: 450px) {
   .product-form {
     &__card {
-      width: 80%;
+      width: 100%;
     }
   }
 }

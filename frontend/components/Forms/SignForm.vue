@@ -201,4 +201,12 @@ export default {
     border-top: 1px solid rgba($color: #000000, $alpha: 0.2);
   }
 }
+
+@media (max-width: 450px) {
+  .sign-form {
+    &__card {
+      width: 100%;
+    }
+  }
+}
 </style>

@@ -50,31 +50,26 @@
             Logout
           </li>
         </ul>
-        <div class="sidenav-container__row-2">
-          <base-container mode="base-container-flex">
-            <ul class="sidenav-container__list--alt">
-              <li class="sidenav-container__item sidenav-container__item--alt">
-                <nuxt-link to="/products/categories">Categories</nuxt-link>
-              </li>
-              <li class="sidenav-container__item sidenav-container__item--alt">
-                <nuxt-link to="/products/categories/technology"
-                  >Technology</nuxt-link
-                >
-              </li>
-              <li class="sidenav-container__item sidenav-container__item--alt">
-                <nuxt-link to="/products/categories/furniture"
-                  >Furniture</nuxt-link
-                >
-              </li>
-              <li class="sidenav-container__item sidenav-container__item--alt">
-                <nuxt-link to="/products/categories/clothes">Clothes</nuxt-link>
-              </li>
-              <li class="sidenav-container__item sidenav-container__item--alt">
-                <nuxt-link to="/products/categories/misc">Misc.</nuxt-link>
-              </li>
-            </ul>
-          </base-container>
-        </div>
+        <div class="sidenav-container__divider"></div>
+        <ul class="sidenav-container__list--alt">
+          <li class="sidenav-container__item sidenav-container__item--alt">
+            <nuxt-link to="/products/categories">Categories</nuxt-link>
+          </li>
+          <li class="sidenav-container__item sidenav-container__item--alt">
+            <nuxt-link to="/products/categories/technology"
+              >Technology</nuxt-link
+            >
+          </li>
+          <li class="sidenav-container__item sidenav-container__item--alt">
+            <nuxt-link to="/products/categories/furniture">Furniture</nuxt-link>
+          </li>
+          <li class="sidenav-container__item sidenav-container__item--alt">
+            <nuxt-link to="/products/categories/clothes">Clothes</nuxt-link>
+          </li>
+          <li class="sidenav-container__item sidenav-container__item--alt">
+            <nuxt-link to="/products/categories/misc">Misc.</nuxt-link>
+          </li>
+        </ul>
       </div>
     </transition>
   </div>
@@ -99,6 +94,7 @@ export default {
       if (this.searchBy) {
         this.$router.push(`/products/search/${this.searchBy}`);
         this.searchBy = "";
+        this.$emit("close");
       }
     }
   }
@@ -123,8 +119,8 @@ export default {
   &__sidenav {
     height: 100%;
     width: 20rem;
-    background-color: var(--main-color);
-    color: white;
+    background-color: white;
+    color: var(--main-color);
     z-index: 10000;
     position: fixed;
     top: 0;
@@ -132,11 +128,12 @@ export default {
     box-sizing: border-box;
     padding: 1rem;
     border-radius: 5px 0 0 5px;
+    border: 1px solid var(--main-color);
   }
 
   &__heading-1 {
-    color: white;
-    border-bottom: 1px solid white;
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
   }
 
   &__search {
@@ -144,7 +141,7 @@ export default {
   }
 
   &__input {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     width: 100%;
     height: 1.6rem;
     padding-left: 0.25rem;
@@ -156,17 +153,22 @@ export default {
   &__search-icon {
     position: absolute;
     right: 1.2rem;
-    top: 0.8rem;
+    top: 1.3rem;
     color: var(--main-color);
     cursor: pointer;
   }
 
   &__list {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 
   &__item {
     margin-top: 0.2rem;
+  }
+
+  &__divider {
+    border-bottom: 1px solid var(--main-color);
+    margin: 1rem 0;
   }
 }
 
