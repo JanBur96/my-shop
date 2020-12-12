@@ -1,8 +1,8 @@
 <template>
   <main class="error">
-    <div class="error404">
+    <div class="error404" v-if="error.statusCode === 404">
       <BaseHeader heading="Error 404" image="error-header.jpg" />
-      <h1 class="error__heading" v-if="error.statusCode === 404">
+      <h1 class="error__heading">
         The page you're looking for doesn't exist
       </h1>
       <img
@@ -10,6 +10,19 @@
         src="~/assets/images/error404-vector.svg"
         alt=""
       />
+      <ul class="error__list">
+        <li>
+          <button class="error__button">
+            <nuxt-link to="/">Back to Home</nuxt-link>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div v-else>
+      <BaseHeader heading="Error" image="error-header.jpg" />
+      <h1 class="error__heading">
+        Error! Please refresh or try again later.
+      </h1>
       <ul class="error__list">
         <li>
           <button class="error__button">

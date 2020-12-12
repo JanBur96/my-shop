@@ -13,6 +13,10 @@ export default {
   name: "AddProduct",
   methods: {
     async addProduct(data) {
+      const num = Number(data.price);
+      const roundedString = num.toFixed(2);
+      const rounded = Number(roundedString);
+
       await this.$axios.post(
         "/products",
         {
@@ -20,7 +24,7 @@ export default {
           title: data.title,
           description: data.description,
           location: data.location,
-          price: data.price
+          price: rounded
         },
         this.$router.push("/")
       );

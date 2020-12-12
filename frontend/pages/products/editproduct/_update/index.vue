@@ -18,6 +18,10 @@ export default {
   methods: {
     async productAction(data) {
       if (data.type === "editProduct") {
+        const num = Number(data.price);
+        const roundedString = num.toFixed(2);
+        const rounded = Number(roundedString);
+
         await this.$axios.put(
           `/products/${this.$route.params.update}`,
           {
@@ -25,7 +29,7 @@ export default {
             title: data.title,
             description: data.description,
             location: data.location,
-            price: data.price
+            price: rounded
           },
           this.$router.push("/users/myprofile")
         );

@@ -94,10 +94,10 @@ export default {
   props: {
     mode: {},
     signinError: {
-      type: String
+      type: Boolean
     },
     signupError: {
-      type: String
+      type: Boolean
     },
     errorMessage: {
       type: String

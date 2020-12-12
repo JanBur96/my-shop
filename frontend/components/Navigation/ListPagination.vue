@@ -26,10 +26,12 @@ export default {
       required: true
     },
     nextPagination: {
-      type: Number
+      type: Object,
+      required: false
     },
     prevPagination: {
-      type: Number
+      type: Object,
+      required: false
     }
   },
   methods: {

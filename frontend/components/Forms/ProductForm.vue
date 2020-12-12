@@ -109,6 +109,7 @@ export default {
       file: undefined,
       product: undefined,
       fileValid: true,
+      disabled: true,
       forgotSomething: false
     };
   },
