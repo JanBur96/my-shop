@@ -14,15 +14,23 @@
 
 <script>
 export default {
+  name: "ListPagination",
   data() {
     return {
       products: []
     };
   },
   props: {
-    page: {},
-    nextPagination: {},
-    prevPagination: {}
+    page: {
+      type: Number,
+      required: true
+    },
+    nextPagination: {
+      type: Number
+    },
+    prevPagination: {
+      type: Number
+    }
   },
   methods: {
     emitNext() {

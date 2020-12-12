@@ -14,6 +14,7 @@
 
 <script>
 export default {
+  name: "PageCategoriesListItem",
   props: {
     title: {
       type: String,

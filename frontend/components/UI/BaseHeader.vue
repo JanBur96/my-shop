@@ -9,6 +9,7 @@
 
 <script>
 export default {
+  name: "BaseHeader",
   props: {
     image: {
       type: String,

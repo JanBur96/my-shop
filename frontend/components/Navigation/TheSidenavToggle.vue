@@ -6,6 +6,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: "TheSidenavToggle"
+};
+</script>
+
 <style scoped>
 .drawer-toggle {
   justify-self: flex-end;

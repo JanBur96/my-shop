@@ -11,6 +11,42 @@
   "LazySignForm": {
     "description": "Auto imported from components/Forms/SignForm.vue"
   },
+  "PageCategoriesList": {
+    "description": "Auto imported from components/PageCategories/PageCategoriesList.vue"
+  },
+  "LazyPageCategoriesList": {
+    "description": "Auto imported from components/PageCategories/PageCategoriesList.vue"
+  },
+  "PageCategoriesListItem": {
+    "description": "Auto imported from components/PageCategories/PageCategoriesListItem.vue"
+  },
+  "LazyPageCategoriesListItem": {
+    "description": "Auto imported from components/PageCategories/PageCategoriesListItem.vue"
+  },
+  "PageProfileDetails": {
+    "description": "Auto imported from components/PageProfile/PageProfileDetails.vue"
+  },
+  "LazyPageProfileDetails": {
+    "description": "Auto imported from components/PageProfile/PageProfileDetails.vue"
+  },
+  "PageProfileProducts": {
+    "description": "Auto imported from components/PageProfile/PageProfileProducts.vue"
+  },
+  "LazyPageProfileProducts": {
+    "description": "Auto imported from components/PageProfile/PageProfileProducts.vue"
+  },
+  "PageProfileProductsList": {
+    "description": "Auto imported from components/PageProfile/PageProfileProductsList.vue"
+  },
+  "LazyPageProfileProductsList": {
+    "description": "Auto imported from components/PageProfile/PageProfileProductsList.vue"
+  },
+  "PageProfileProductsListItem": {
+    "description": "Auto imported from components/PageProfile/PageProfileProductsListItem.vue"
+  },
+  "LazyPageProfileProductsListItem": {
+    "description": "Auto imported from components/PageProfile/PageProfileProductsListItem.vue"
+  },
   "ListPagination": {
     "description": "Auto imported from components/Navigation/ListPagination.vue"
   },
@@ -40,18 +76,6 @@
   },
   "LazyTheSidenavToggle": {
     "description": "Auto imported from components/Navigation/TheSidenavToggle.vue"
-  },
-  "PageCategoriesList": {
-    "description": "Auto imported from components/PageCategories/PageCategoriesList.vue"
-  },
-  "LazyPageCategoriesList": {
-    "description": "Auto imported from components/PageCategories/PageCategoriesList.vue"
-  },
-  "PageCategoriesListItem": {
-    "description": "Auto imported from components/PageCategories/PageCategoriesListItem.vue"
-  },
-  "LazyPageCategoriesListItem": {
-    "description": "Auto imported from components/PageCategories/PageCategoriesListItem.vue"
   },
   "BaseButton": {
     "description": "Auto imported from components/UI/BaseButton.vue"
@@ -94,29 +118,5 @@
   },
   "LazyBaseListItem": {
     "description": "Auto imported from components/UI/BaseListItem.vue"
-  },
-  "PageProfileDetails": {
-    "description": "Auto imported from components/PageProfile/PageMyProfile/PageProfileDetails.vue"
-  },
-  "LazyPageProfileDetails": {
-    "description": "Auto imported from components/PageProfile/PageMyProfile/PageProfileDetails.vue"
-  },
-  "PageProfileProducts": {
-    "description": "Auto imported from components/PageProfile/PageMyProfile/PageProfileProducts.vue"
-  },
-  "LazyPageProfileProducts": {
-    "description": "Auto imported from components/PageProfile/PageMyProfile/PageProfileProducts.vue"
-  },
-  "PageProfileProductsList": {
-    "description": "Auto imported from components/PageProfile/PageMyProfile/PageProfileProductsList.vue"
-  },
-  "LazyPageProfileProductsList": {
-    "description": "Auto imported from components/PageProfile/PageMyProfile/PageProfileProductsList.vue"
-  },
-  "PageProfileProductsListItem": {
-    "description": "Auto imported from components/PageProfile/PageMyProfile/PageProfileProductsListItem.vue"
-  },
-  "LazyPageProfileProductsListItem": {
-    "description": "Auto imported from components/PageProfile/PageMyProfile/PageProfileProductsListItem.vue"
   }
 }

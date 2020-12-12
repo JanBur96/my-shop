@@ -7,8 +7,8 @@
         @nextPage="nextPage"
         @prevPage="prevPage"
         :page="page"
-        :nextPagination="nextPagination"
-        :prevPagination="prevPagination"
+        :next-pagination="nextPagination"
+        :prev-pagination="prevPagination"
       />
     </base-container>
   </main>
@@ -16,11 +16,12 @@
 
 <script>
 export default {
+  name: "Categorie",
   data() {
     return {
-      products: [],
-      categorieName: "",
       page: 1,
+      products: undefined,
+      categorieName: undefined,
       nextPagination: undefined,
       prevPagination: undefined
     };

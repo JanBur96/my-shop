@@ -5,7 +5,7 @@
         <img
           class="profile__image"
           :src="require(`~/assets/product-images/${photo}`)"
-          alt=""
+          :alt="`Image of ${title}`"
         />
       </div>
       <div class="profile__col-2">
@@ -29,13 +29,28 @@
 
 <script>
 export default {
+  name: "ProfileProductsListItem",
   props: {
-    title: {},
-    image: {},
-    price: {},
-    description: {},
-    id: {},
-    photo: {}
+    title: {
+      type: String,
+      required: true
+    },
+    price: {
+      type: Number,
+      required: true
+    },
+    description: {
+      type: String,
+      required: true
+    },
+    id: {
+      type: String,
+      required: true
+    },
+    photo: {
+      type: String,
+      required: true
+    }
   },
   inject: ["mode"]
 };

@@ -1,10 +1,10 @@
 <template>
-  <main class="my-profile">
+  <main class="user-profile">
     <base-container>
       <BaseHeader image="myprofile-header.jpg" heading="User Profile" />
-      <h3 class="my-profile__heading">{{ user.name }}'s Details</h3>
-      <base-card class="my-profile__card">
-        <section class="my-profile__infos">
+      <h3 class="user-profile__heading">{{ user.name }}'s Details</h3>
+      <base-card class="user-profile__card">
+        <section class="user-profile__infos">
           <PageProfileDetails
             :name="user.name"
             :email="user.email"
@@ -19,6 +19,7 @@
 
 <script>
 export default {
+  name: "UserProfile",
   async asyncData({ params, $axios }) {
     let user = await $axios.get(`/users/${params.user}`);
     user = user.data.data;
@@ -32,7 +33,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.my-profile {
+.user-profile {
   &__infos {
     display: grid;
     grid-template-columns: 1fr 3fr;

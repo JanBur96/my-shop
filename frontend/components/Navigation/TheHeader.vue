@@ -84,6 +84,7 @@
 
 <script>
 export default {
+  name: "TheHeader",
   data() {
     return {
       searchBy: undefined

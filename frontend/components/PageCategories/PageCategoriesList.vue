@@ -14,6 +14,7 @@
 
 <script>
 export default {
+  name: "PageCategoriesList",
   props: {
     categories: {
       type: Array,

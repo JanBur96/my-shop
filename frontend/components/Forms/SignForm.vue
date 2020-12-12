@@ -1,6 +1,16 @@
 <template>
   <section class="sign-form">
     <base-card class="sign-form__card">
+      <p
+        class="sign-form__error"
+        v-if="!repeatPasswordCheck || signinError || signupError"
+      >
+        {{
+          this.$props.errorMessage
+            ? this.$props.errorMessage
+            : "Something went wrong!"
+        }}
+      </p>
       <form class="sign-form__form" @submit.prevent="emitRegisterUser">
         <base-form-control v-if="mode === 'signup'">
           <label for="name" class="sign-form__label">Full Name</label>
@@ -80,15 +90,25 @@
 
 <script>
 export default {
+  name: "SignForm",
   props: {
-    mode: {}
+    mode: {},
+    signinError: {
+      type: String
+    },
+    signupError: {
+      type: String
+    },
+    errorMessage: {
+      type: String
+    }
   },
   data() {
     return {
-      fullName: "",
-      email: "",
-      password: "",
-      repeatPassword: "",
+      fullName: undefined,
+      email: undefined,
+      password: undefined,
+      repeatPassword: undefined,
       repeatPasswordCheck: true
     };
   },
@@ -143,9 +163,9 @@ export default {
   &__input {
     width: 100%;
     height: 1.6rem;
-    font-size: 1rem;
     margin-top: 0.2rem;
     padding-left: 0.25rem;
+    font-size: 1rem;
     border: 1px solid rgba($color: #000000, $alpha: 0.2);
     border-radius: 5px;
     outline-color: var(--main-color);
@@ -200,12 +220,21 @@ export default {
     justify-content: space-between;
     border-top: 1px solid rgba($color: #000000, $alpha: 0.2);
   }
+
+  &__error {
+    margin-bottom: 0.5rem;
+    text-align: center;
+    padding: 0.2rem;
+    border-radius: 5px;
+    color: white;
+    background: red;
+  }
 }
 
 @media (max-width: 450px) {
   .sign-form {
     &__card {
-      width: 100%;
+      width: 80%;
     }
   }
 }

@@ -14,9 +14,7 @@
 
 <script>
 export default {
-  data() {
-    return {};
-  },
+  name: "UpdateProduct",
   methods: {
     async productAction(data) {
       if (data.type === "editProduct") {

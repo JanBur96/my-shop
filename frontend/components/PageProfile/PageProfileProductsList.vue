@@ -1,5 +1,5 @@
 <template>
-  <ul class="my-profile__list">
+  <ul class="profile-list">
     <PageProfileProductsListItem
       v-for="product in products"
       :key="product.id"
@@ -15,20 +15,23 @@
 
 <script>
 export default {
+  name: "ProfileProductsList",
   props: {
-    products: {}
+    products: {
+      type: Array,
+      required: true,
+      default: []
+    }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-.my-profile {
-  &__list {
-    max-height: 23rem;
-    margin-top: 0.5rem;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    overflow-y: auto;
-  }
+.profile-list {
+  max-height: 23rem;
+  margin-top: 0.5rem;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  overflow-y: auto;
 }
 
 @media (max-width: 450px) {

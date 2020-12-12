@@ -1,36 +1,49 @@
 <template>
-  <main class="main">
+  <main class="signin">
     <base-container>
       <BaseHeader image="signin-header.jpg" heading="Sign In" />
-      <h3 class="main__heading">Welcome back</h3>
-      <SignForm mode="signin" @signAction="loginUser" />
+      <h3 class="signin__heading">Welcome back</h3>
+      <SignForm
+        mode="signin"
+        @signAction="loginUser"
+        :signin-error="signinError"
+        :error-message="errorMessage"
+      />
     </base-container>
   </main>
 </template>
 
 <script>
 export default {
+  name: "SignIn",
   data() {
     return {
-      email: "",
-      password: ""
+      email: undefined,
+      password: undefined,
+      errorMessage: undefined,
+      signinError: false
     };
   },
   methods: {
-    loginUser(data) {
-      this.$auth.loginWith("local", {
-        data: {
-          email: data.email,
-          password: data.password
-        }
-      });
+    async loginUser(data) {
+      try {
+        await this.$auth.loginWith("local", {
+          data: {
+            email: data.email,
+            password: data.password
+          }
+        });
+      } catch (err) {
+        this.signinError = true;
+        this.errorMessage = err.response.data.error;
+      }
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-.main {
+.signin {
   &__heading {
     text-align: center;
   }

@@ -10,6 +10,7 @@
 
 <script>
 export default {
+  name: "AddProduct",
   methods: {
     async addProduct(data) {
       await this.$axios.post(

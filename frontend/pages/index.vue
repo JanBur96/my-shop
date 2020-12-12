@@ -1,5 +1,5 @@
 <template>
-  <main class="main">
+  <main>
     <base-container>
       <BaseHeader image="home-header.jpg" heading="Welcome" />
       <BaseList :products="products" category="Latest Products" />
@@ -16,6 +16,7 @@
 
 <script>
 export default {
+  name: "Home",
   data() {
     return {
       products: [],

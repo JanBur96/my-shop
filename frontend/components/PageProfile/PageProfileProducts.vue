@@ -10,12 +10,19 @@
 
 <script>
 export default {
+  name: "ProfileProducts",
   props: {
-    products: {},
-    mode: {}
+    products: {
+      type: Array,
+      required: true,
+      default: []
+    },
+    mode: {
+      type: String
+    }
   },
   mounted() {
-    let test = this.$props.products.sort(function compare(a, b) {
+    let sortProducts = this.$props.products.sort(function compare(a, b) {
       let dateA = new Date(a.createdAt);
       let dateB = new Date(b.createdAt);
 

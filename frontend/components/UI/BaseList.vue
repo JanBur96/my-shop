@@ -17,6 +17,7 @@
 
 <script>
 export default {
+  name: "BaseList",
   props: {
     category: {
       type: String,

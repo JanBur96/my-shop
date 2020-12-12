@@ -1,10 +1,10 @@
 <template>
   <section class="product-form">
     <base-card class="product-form__card">
+      <p class="product-form__forgot-something" v-if="forgotSomething">
+        You forgot something!
+      </p>
       <form class="product-form__form" action="" @submit.prevent>
-        <p class="product-form__forgot-something" v-if="forgotSomething">
-          You forgot something!
-        </p>
         <base-form-control>
           <label for="">Title</label>
           <input class="product-form__input" v-model="title" type="text" />
@@ -98,16 +98,17 @@
 
 <script>
 export default {
+  name: "ProductForm",
   data() {
     return {
-      category: "",
-      title: "",
-      description: "",
-      location: "",
-      price: "",
-      file: "",
+      category: undefined,
+      title: undefined,
+      description: undefined,
+      location: undefined,
+      price: undefined,
+      file: undefined,
+      product: undefined,
       fileValid: true,
-      product: {},
       forgotSomething: false
     };
   },

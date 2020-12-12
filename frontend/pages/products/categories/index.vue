@@ -9,6 +9,7 @@
 
 <script>
 export default {
+  name: "Categories",
   data() {
     return {
       categories: [

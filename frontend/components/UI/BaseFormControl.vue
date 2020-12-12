@@ -5,7 +5,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "BaseFormControl"
+};
 </script>
 
 <style lang="scss" scoped>

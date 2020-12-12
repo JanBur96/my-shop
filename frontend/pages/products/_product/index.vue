@@ -59,6 +59,7 @@
 
 <script>
 export default {
+  name: "Product",
   async asyncData({ params, $axios }) {
     let product = await $axios.get(`/products/${params.product}`);
     product = product.data.data;

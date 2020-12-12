@@ -10,6 +10,7 @@
 
 <script>
 export default {
+  name: "Search",
   async asyncData({ params, $axios }) {
     let products = await $axios.get(`/products/search/${params.search}`);
     products = products.data.data;

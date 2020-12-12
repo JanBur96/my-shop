@@ -76,6 +76,7 @@
 
 <script>
 export default {
+  name: "profile-details",
   data() {
     return {
       editUser: false,
