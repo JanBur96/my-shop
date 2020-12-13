@@ -83,6 +83,18 @@
   "LazyBaseListItem": {
     "description": "Auto imported from components/UI/BaseListItem.vue"
   },
+  "PageCategoriesList": {
+    "description": "Auto imported from components/PageCategories/PageCategoriesList.vue"
+  },
+  "LazyPageCategoriesList": {
+    "description": "Auto imported from components/PageCategories/PageCategoriesList.vue"
+  },
+  "PageCategoriesListItem": {
+    "description": "Auto imported from components/PageCategories/PageCategoriesListItem.vue"
+  },
+  "LazyPageCategoriesListItem": {
+    "description": "Auto imported from components/PageCategories/PageCategoriesListItem.vue"
+  },
   "PageProfileDetails": {
     "description": "Auto imported from components/PageProfile/PageProfileDetails.vue"
   },
@@ -106,17 +118,5 @@
   },
   "LazyPageProfileProductsListItem": {
     "description": "Auto imported from components/PageProfile/PageProfileProductsListItem.vue"
-  },
-  "PageCategoriesList": {
-    "description": "Auto imported from components/PageCategories/PageCategoriesList.vue"
-  },
-  "LazyPageCategoriesList": {
-    "description": "Auto imported from components/PageCategories/PageCategoriesList.vue"
-  },
-  "PageCategoriesListItem": {
-    "description": "Auto imported from components/PageCategories/PageCategoriesListItem.vue"
-  },
-  "LazyPageCategoriesListItem": {
-    "description": "Auto imported from components/PageCategories/PageCategoriesListItem.vue"
   }
 }

@@ -12,12 +12,12 @@ export { default as BaseFormControl } from '../../components/UI/BaseFormControl.
 export { default as BaseHeader } from '../../components/UI/BaseHeader.vue'
 export { default as BaseList } from '../../components/UI/BaseList.vue'
 export { default as BaseListItem } from '../../components/UI/BaseListItem.vue'
+export { default as PageCategoriesList } from '../../components/PageCategories/PageCategoriesList.vue'
+export { default as PageCategoriesListItem } from '../../components/PageCategories/PageCategoriesListItem.vue'
 export { default as PageProfileDetails } from '../../components/PageProfile/PageProfileDetails.vue'
 export { default as PageProfileProducts } from '../../components/PageProfile/PageProfileProducts.vue'
 export { default as PageProfileProductsList } from '../../components/PageProfile/PageProfileProductsList.vue'
 export { default as PageProfileProductsListItem } from '../../components/PageProfile/PageProfileProductsListItem.vue'
-export { default as PageCategoriesList } from '../../components/PageCategories/PageCategoriesList.vue'
-export { default as PageCategoriesListItem } from '../../components/PageCategories/PageCategoriesListItem.vue'
 
 export const LazyProductForm = import('../../components/Forms/ProductForm.vue' /* webpackChunkName: "components/Forms/ProductForm" */).then(c => c.default || c)
 export const LazySignForm = import('../../components/Forms/SignForm.vue' /* webpackChunkName: "components/Forms/SignForm" */).then(c => c.default || c)
@@ -33,9 +33,9 @@ export const LazyBaseFormControl = import('../../components/UI/BaseFormControl.v
 export const LazyBaseHeader = import('../../components/UI/BaseHeader.vue' /* webpackChunkName: "components/UI/BaseHeader" */).then(c => c.default || c)
 export const LazyBaseList = import('../../components/UI/BaseList.vue' /* webpackChunkName: "components/UI/BaseList" */).then(c => c.default || c)
 export const LazyBaseListItem = import('../../components/UI/BaseListItem.vue' /* webpackChunkName: "components/UI/BaseListItem" */).then(c => c.default || c)
+export const LazyPageCategoriesList = import('../../components/PageCategories/PageCategoriesList.vue' /* webpackChunkName: "components/PageCategories/PageCategoriesList" */).then(c => c.default || c)
+export const LazyPageCategoriesListItem = import('../../components/PageCategories/PageCategoriesListItem.vue' /* webpackChunkName: "components/PageCategories/PageCategoriesListItem" */).then(c => c.default || c)
 export const LazyPageProfileDetails = import('../../components/PageProfile/PageProfileDetails.vue' /* webpackChunkName: "components/PageProfile/PageProfileDetails" */).then(c => c.default || c)
 export const LazyPageProfileProducts = import('../../components/PageProfile/PageProfileProducts.vue' /* webpackChunkName: "components/PageProfile/PageProfileProducts" */).then(c => c.default || c)
 export const LazyPageProfileProductsList = import('../../components/PageProfile/PageProfileProductsList.vue' /* webpackChunkName: "components/PageProfile/PageProfileProductsList" */).then(c => c.default || c)
 export const LazyPageProfileProductsListItem = import('../../components/PageProfile/PageProfileProductsListItem.vue' /* webpackChunkName: "components/PageProfile/PageProfileProductsListItem" */).then(c => c.default || c)
-export const LazyPageCategoriesList = import('../../components/PageCategories/PageCategoriesList.vue' /* webpackChunkName: "components/PageCategories/PageCategoriesList" */).then(c => c.default || c)
-export const LazyPageCategoriesListItem = import('../../components/PageCategories/PageCategoriesListItem.vue' /* webpackChunkName: "components/PageCategories/PageCategoriesListItem" */).then(c => c.default || c)

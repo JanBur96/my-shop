@@ -32,7 +32,7 @@
             required
           />
         </base-form-control>
-        <base-form-control>
+        <base-form-control v-if="mode !== 'forgot'">
           <label
             for="password"
             class="sign-form__label"
@@ -67,9 +67,13 @@
         <base-button class="sign-form__button" v-if="mode === 'signup'"
           >Register</base-button
         >
+
+        <base-button class="sign-form__button" v-else-if="mode === 'forgot'"
+          >Send Email</base-button
+        >
         <base-button class="sign-form__button" v-else>Login</base-button>
       </form>
-      <div class="sign-form__social-login">
+      <div class="sign-form__social-login" v-if="mode !== 'forgot'">
         <p>or</p>
         <ul class="sign-form__list">
           <li class="sign-form__item">
@@ -81,7 +85,9 @@
         </ul>
       </div>
       <div class="sign-form__support">
-        <nuxt-link to="forgotpassword">Forgot Password?</nuxt-link>
+        <nuxt-link to="/support/forgotpassword" v-if="mode !== 'forgot'"
+          >Forgot Password?</nuxt-link
+        >
         <nuxt-link to="faq">Need help?</nuxt-link>
       </div>
     </base-card>

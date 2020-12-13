@@ -42,6 +42,13 @@
     "_name": "_7c52a624"
   },
   {
+    "name": "support-forgotpassword",
+    "path": "/support/forgotpassword",
+    "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/support/forgotpassword/index.vue",
+    "chunkName": "pages/support/forgotpassword/index",
+    "_name": "_78b8f42d"
+  },
+  {
     "name": "users-myprofile",
     "path": "/users/myprofile",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/users/myprofile/index.vue",

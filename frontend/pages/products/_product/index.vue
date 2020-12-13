@@ -11,7 +11,7 @@
 
         <div class="product__information">
           <div class="product__row-1">
-            <h3 class="product__header">{{ product.title }}</h3>
+            <h3 class="product__heading">{{ product.title }}</h3>
             <p class="product__description">{{ product.description }}</p>
           </div>
           <div class="product__row-2">
@@ -86,6 +86,10 @@ export default {
     height: 100%;
     border-radius: 0 7.5px 7.5px 0;
     object-fit: cover;
+  }
+
+  &__heading {
+    margin-top: 0;
   }
 
   &__information {
@@ -196,10 +200,6 @@ export default {
 
     &__row-2 {
       grid-template-rows: 0.5fr 1fr;
-    }
-
-    &__header {
-      margin-top: 0;
     }
   }
 }

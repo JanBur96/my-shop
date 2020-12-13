@@ -9,6 +9,7 @@ const _559edfc7 = () => interopDefault(import('../pages/signup/index.vue' /* web
 const _122645d4 = () => interopDefault(import('../pages/support/index.vue' /* webpackChunkName: "pages/support/index" */))
 const _d6ec7500 = () => interopDefault(import('../pages/products/addproduct/index.vue' /* webpackChunkName: "pages/products/addproduct/index" */))
 const _7c52a624 = () => interopDefault(import('../pages/products/categories/index.vue' /* webpackChunkName: "pages/products/categories/index" */))
+const _78b8f42d = () => interopDefault(import('../pages/support/forgotpassword/index.vue' /* webpackChunkName: "pages/support/forgotpassword/index" */))
 const _64e57086 = () => interopDefault(import('../pages/users/myprofile/index.vue' /* webpackChunkName: "pages/users/myprofile/index" */))
 const _8c021062 = () => interopDefault(import('../pages/products/categories/_categorie/index.vue' /* webpackChunkName: "pages/products/categories/_categorie/index" */))
 const _63ecaa42 = () => interopDefault(import('../pages/products/editproduct/_update/index.vue' /* webpackChunkName: "pages/products/editproduct/_update/index" */))
@@ -57,6 +58,10 @@ export const routerOptions = {
     path: "/products/categories",
     component: _7c52a624,
     name: "products-categories"
+  }, {
+    path: "/support/forgotpassword",
+    component: _78b8f42d,
+    name: "support-forgotpassword"
   }, {
     path: "/users/myprofile",
     component: _64e57086,
