@@ -1,7 +1,7 @@
 {
-  "name": "mls",
+  "name": "local-shop",
   "version": "1.0.0",
-  "description": "Sell your in person, but advertise it online",
+  "description": "Sell your products online or in person",
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server"
@@ -13,11 +13,13 @@
     "colors": "^1.4.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
+    "crypto": "^1.0.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-fileupload": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.10.13"
+    "mongoose": "^5.10.13",
+    "nodemailer": "^6.4.17"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"

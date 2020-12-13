@@ -45,7 +45,7 @@
   {
     "_id": "5d7a514b5d2c12c7449be048",
     "name": "Janette Goldberg",
-    "email": "haci@example.com",
+    "email": "janette@example.com",
     "password": "12345678",
     "role": "user"
   },

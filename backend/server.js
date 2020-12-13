@@ -33,6 +33,7 @@ app.use(cookieParser());
 // File uploading
 app.use(fileUpload());
 
+// Cors - Won't otherwise (cross-site...)
 app.use(cors());
 
 // Mount routers
