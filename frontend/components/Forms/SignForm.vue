@@ -22,7 +22,7 @@
             required
           />
         </base-form-control>
-        <base-form-control>
+        <base-form-control v-if="mode !== 'resetPassword'">
           <label for="email" class="sign-form__label">Email</label>
           <input
             name="email"
@@ -48,7 +48,7 @@
             minlength="8"
           />
         </base-form-control>
-        <base-form-control v-if="mode === 'signup'">
+        <base-form-control v-if="mode === 'signup' || mode === 'resetPassword'">
           <label
             for="repeatPassword"
             class="sign-form__label"
@@ -71,9 +71,17 @@
         <base-button class="sign-form__button" v-else-if="mode === 'forgot'"
           >Send Email</base-button
         >
+        <base-button
+          class="sign-form__button"
+          v-else-if="mode === 'resetPassword'"
+          >Change Password</base-button
+        >
         <base-button class="sign-form__button" v-else>Login</base-button>
       </form>
-      <div class="sign-form__social-login" v-if="mode !== 'forgot'">
+      <div
+        class="sign-form__social-login"
+        v-if="mode !== 'forgot' && mode !== 'resetPassword'"
+      >
         <p>or</p>
         <ul class="sign-form__list">
           <li class="sign-form__item">
@@ -85,7 +93,9 @@
         </ul>
       </div>
       <div class="sign-form__support">
-        <nuxt-link to="/support/forgotpassword" v-if="mode !== 'forgot'"
+        <nuxt-link
+          to="/support/forgotpassword"
+          v-if="mode !== 'forgot' && mode !== 'resetPassword'"
           >Forgot Password?</nuxt-link
         >
         <nuxt-link to="faq">Need help?</nuxt-link>
@@ -120,7 +130,10 @@ export default {
   },
   methods: {
     emitRegisterUser() {
-      if (this.$props.mode === "signup") {
+      if (
+        this.$props.mode === "signup" ||
+        this.$props.mode === "resetPassword"
+      ) {
         if (this.password === this.repeatPassword) {
           const data = {
             fullName: this.fullName,

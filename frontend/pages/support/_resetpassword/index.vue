@@ -1,0 +1,31 @@
+<template>
+  <main class="reset-password">
+    <BaseHeader heading="Reset Password" image="forgotpassword-header.jpg" />
+    <h3 class="reset-password__heading">Reset your password</h3>
+    <SignForm mode="resetPassword" @signAction="resetPassword" />
+  </main>
+</template>
+
+<script>
+export default {
+  methods: {
+    async resetPassword(data) {
+      await this.$axios.put(
+        `/auth/resetpassword/${this.$route.params.resetpassword}`,
+        {
+          password: data.password
+        }
+      );
+      this.$router.push("/signin");
+    }
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+.reset-password {
+  &__heading {
+    text-align: center;
+  }
+}
+</style>

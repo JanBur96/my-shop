@@ -15,6 +15,7 @@ const _8c021062 = () => interopDefault(import('../pages/products/categories/_cat
 const _63ecaa42 = () => interopDefault(import('../pages/products/editproduct/_update/index.vue' /* webpackChunkName: "pages/products/editproduct/_update/index" */))
 const _0290689c = () => interopDefault(import('../pages/products/search/_search/index.vue' /* webpackChunkName: "pages/products/search/_search/index" */))
 const _5b6b3342 = () => interopDefault(import('../pages/products/_product/index.vue' /* webpackChunkName: "pages/products/_product/index" */))
+const _2951801a = () => interopDefault(import('../pages/support/_resetpassword/index.vue' /* webpackChunkName: "pages/support/_resetpassword/index" */))
 const _f5c65fac = () => interopDefault(import('../pages/users/_user/index.vue' /* webpackChunkName: "pages/users/_user/index" */))
 const _0ca67b56 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -82,6 +83,10 @@ export const routerOptions = {
     path: "/products/:product",
     component: _5b6b3342,
     name: "products-product"
+  }, {
+    path: "/support/:resetpassword",
+    component: _2951801a,
+    name: "support-resetpassword"
   }, {
     path: "/users/:user",
     component: _f5c65fac,

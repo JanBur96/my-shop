@@ -84,6 +84,13 @@
     "_name": "_5b6b3342"
   },
   {
+    "name": "support-resetpassword",
+    "path": "/support/:resetpassword",
+    "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/support/_resetpassword/index.vue",
+    "chunkName": "pages/support/_resetpassword/index",
+    "_name": "_2951801a"
+  },
+  {
     "name": "users-user",
     "path": "/users/:user",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/users/_user/index.vue",
