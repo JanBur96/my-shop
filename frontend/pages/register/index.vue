@@ -1,12 +1,12 @@
 <template>
-  <main class="signup">
+  <main class="register">
     <base-container>
-      <BaseHeader image="signup-header.jpg" heading="Sign Up" />
-      <h3 class="signup__heading">Welcome to Localshop</h3>
-      <SignForm
-        mode="signup"
+      <BaseHeader image="register-header.jpg" heading="Sign Up" />
+      <h3 class="register__heading">Welcome to Localshop</h3>
+      <AuthForm
+        mode="[fullName, email, password, repeatPassword, socialLogin, forgotPassword]"
         @signAction="registerUser"
-        :signup-error="signupError"
+        :error="error"
         :error-message="errorMessage"
       />
     </base-container>
@@ -15,10 +15,10 @@
 
 <script>
 export default {
-  name: "SignUp",
+  name: "register",
   data() {
     return {
-      signupError: false,
+      error: false,
       errorMessage: undefined
     };
   },
@@ -39,7 +39,7 @@ export default {
         });
       } catch (err) {
         console.log(err.response);
-        this.signupError = true;
+        this.error = true;
         this.errorMessage = err.response.data.error;
       }
     }
@@ -48,7 +48,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.signup {
+.register {
   &__heading {
     text-align: center;
   }

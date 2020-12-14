@@ -2,7 +2,10 @@
   <main class="reset-password">
     <BaseHeader heading="Reset Password" image="forgotpassword-header.jpg" />
     <h3 class="reset-password__heading">Reset your password</h3>
-    <SignForm mode="resetPassword" @signAction="resetPassword" />
+    <AuthForm
+      mode="[password, repeatPassword, passwordCheck]"
+      @signAction="resetPassword"
+    />
   </main>
 </template>
 
@@ -16,7 +19,7 @@ export default {
           password: data.password
         }
       );
-      this.$router.push("/signin");
+      this.$router.push("/login");
     }
   }
 };

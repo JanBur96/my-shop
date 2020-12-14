@@ -8,7 +8,7 @@
               <nuxt-link to="/">Home</nuxt-link>
             </li>
             <li class="header__item">
-              <nuxt-link to="/faq">FAQ</nuxt-link>
+              <nuxt-link to="/support/faq">FAQ</nuxt-link>
             </li>
             <li class="header__item">
               <nuxt-link to="/support">Support</nuxt-link>
@@ -18,10 +18,10 @@
         <nuxt-link to="/" class="header__logo"><h1>LocalShop</h1></nuxt-link>
         <ul v-if="!$auth.loggedIn" class="header__list header__list--col-3">
           <li class="header__item">
-            <nuxt-link to="/signin">Sign In</nuxt-link>
+            <nuxt-link to="/login">Sign In</nuxt-link>
           </li>
           <li class="header__item">
-            <nuxt-link to="/signup">Sign Up</nuxt-link>
+            <nuxt-link to="/register">Sign Up</nuxt-link>
           </li>
         </ul>
         <ul v-if="$auth.loggedIn" class="header__list header__list--col-3">

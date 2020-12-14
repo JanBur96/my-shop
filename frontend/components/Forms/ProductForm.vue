@@ -1,3 +1,5 @@
+// For everything Product related (New Product, Edit Product...)
+
 <template>
   <section class="product-form">
     <base-card class="product-form__card">

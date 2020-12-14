@@ -2,7 +2,12 @@
   <main>
     <base-container>
       <BaseHeader image="overview-technology.jpg" :heading="categorieName" />
-      <BaseList :category="categorieName" :products="products" />
+      <BaseList
+        mode="sort"
+        :category="categorieName"
+        :products="products"
+        @sortProducts="sortProducts"
+      />
       <ListPagination
         @nextPage="nextPage"
         @prevPage="prevPage"
@@ -23,14 +28,20 @@ export default {
       products: undefined,
       categorieName: undefined,
       nextPagination: undefined,
-      prevPagination: undefined
+      prevPagination: undefined,
+      sortBy: "-createdAt"
     };
   },
   methods: {
+    sortProducts(data) {
+      this.sortBy = data;
+      console.log("runs");
+      this.fetchAgain();
+    },
     async nextPage() {
       const fetch = await this.$axios.get(
         `/products?categories[in]=${this.categorieName}&page=${this.page +
-          1}&limit=20`
+          1}&limit=20&sort=${this.sortBy}`
       );
       this.products = fetch.data.data;
       this.nextPagination = fetch.data.pagination.next;
@@ -40,17 +51,24 @@ export default {
     async prevPage() {
       const fetch = await this.$axios.get(
         `/products?categories[in]=${this.categorieName}&page=${this.page -
-          1}&limit=20`
+          1}&limit=20&sort=${this.sortBy}`
       );
       this.products = fetch.data.data;
       this.nextPagination = fetch.data.pagination.next;
       this.prevPagination = fetch.data.pagination.prev;
       this.page -= 1;
+    },
+    async fetchAgain() {
+      const fetch = await this.$axios.get(
+        `/products?categories[in]=${this.categorieName}&page=${this.page}&limit=20&sort=${this.sortBy}`
+      );
+      this.products = fetch.data.data;
+      this.nextPagination = fetch.data.pagination.next;
     }
   },
   async fetch() {
     const fetch = await this.$axios.get(
-      `/products?categories[in]=${this.categorieName}&page=1&limit=20`
+      `/products?categories[in]=${this.categorieName}&page=${this.page}&limit=20&sort=${this.sortBy}`
     );
     this.products = fetch.data.data;
     this.nextPagination = fetch.data.pagination.next;

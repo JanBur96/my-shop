@@ -29,10 +29,10 @@
           @click="$emit('close')"
         >
           <li class="sidenav-container__item">
-            <nuxt-link to="/signin">Sign In</nuxt-link>
+            <nuxt-link to="/login">Sign In</nuxt-link>
           </li>
           <li class="sidenav-container__item">
-            <nuxt-link to="/signup">Sign Up</nuxt-link>
+            <nuxt-link to="/register">Sign Up</nuxt-link>
           </li>
         </ul>
         <ul

@@ -1,101 +1,85 @@
+// For everything Auth related (Login, Register, Forgot PW, Reset PW...)
+
 <template>
-  <section class="sign-form">
-    <base-card class="sign-form__card">
-      <p
-        class="sign-form__error"
-        v-if="!repeatPasswordCheck || signinError || signupError"
-      >
+  <section class="auth">
+    <base-card class="auth__card">
+      <p class="auth__error" v-if="!repeatPasswordCheck || error">
         {{
           this.$props.errorMessage
             ? this.$props.errorMessage
             : "Something went wrong!"
         }}
       </p>
-      <form class="sign-form__form" @submit.prevent="emitRegisterUser">
-        <base-form-control v-if="mode === 'signup'">
-          <label for="name" class="sign-form__label">Full Name</label>
+      <form class="auth__form" @submit.prevent="emitRegisterUser">
+        <base-form-control v-if="mode.includes('fullName')">
+          <label for="name" class="auth__label">Full Name</label>
           <input
             name="name"
             type="text"
-            class="sign-form__input"
+            class="auth__input"
             v-model="fullName"
             required
           />
         </base-form-control>
-        <base-form-control v-if="mode !== 'resetPassword'">
-          <label for="email" class="sign-form__label">Email</label>
+        <base-form-control v-if="mode.includes('email')">
+          <label for="email" class="auth__label">Email</label>
           <input
             name="email"
             type="email"
-            class="sign-form__input"
+            class="auth__input"
             v-model="email"
             required
           />
         </base-form-control>
-        <base-form-control v-if="mode !== 'forgot'">
+        <base-form-control v-if="mode.includes('password')">
           <label
             for="password"
-            class="sign-form__label"
+            class="auth__label"
             :class="{ 'text-danger': !repeatPasswordCheck }"
             >Password</label
           >
           <input
             name="password"
             type="password"
-            class="sign-form__input"
+            class="auth__input"
             v-model="password"
             required
             minlength="8"
           />
         </base-form-control>
-        <base-form-control v-if="mode === 'signup' || mode === 'resetPassword'">
+        <base-form-control v-if="mode.includes('repeatPassword')">
           <label
             for="repeatPassword"
-            class="sign-form__label"
+            class="auth__label"
             :class="{ 'text-danger': !repeatPasswordCheck }"
             >Repeat Password</label
           >
           <input
             name="repeatPassword"
             type="password"
-            class="sign-form__input"
+            class="auth__input"
             v-model="repeatPassword"
             required
             minlength="8"
           />
         </base-form-control>
-        <base-button class="sign-form__button" v-if="mode === 'signup'"
-          >Register</base-button
-        >
-
-        <base-button class="sign-form__button" v-else-if="mode === 'forgot'"
-          >Send Email</base-button
-        >
-        <base-button
-          class="sign-form__button"
-          v-else-if="mode === 'resetPassword'"
-          >Change Password</base-button
-        >
-        <base-button class="sign-form__button" v-else>Login</base-button>
+        <base-button class="auth__button">Submit</base-button>
       </form>
-      <div
-        class="sign-form__social-login"
-        v-if="mode !== 'forgot' && mode !== 'resetPassword'"
-      >
+      <div class="auth__social-login" v-if="mode.includes('socialLogin')">
         <p>or</p>
-        <ul class="sign-form__list">
-          <li class="sign-form__item">
-            <fa class="sign-form__icon" :icon="['fab', 'facebook']" />
+        <ul class="auth__list">
+          <li class="auth__item">
+            <fa class="auth__icon" :icon="['fab', 'facebook']" />
           </li>
-          <li class="sign-form__item">
-            <fa class="sign-form__icon" :icon="['fab', 'google']" />
+          <li class="auth__item">
+            <fa class="auth__icon" :icon="['fab', 'google']" />
           </li>
         </ul>
       </div>
-      <div class="sign-form__support">
+      <div class="auth__support">
         <nuxt-link
           to="/support/forgotpassword"
-          v-if="mode !== 'forgot' && mode !== 'resetPassword'"
+          v-if="mode.includes('forgotPassword')"
           >Forgot Password?</nuxt-link
         >
         <nuxt-link to="faq">Need help?</nuxt-link>
@@ -106,13 +90,10 @@
 
 <script>
 export default {
-  name: "SignForm",
+  name: "AuthForm",
   props: {
     mode: {},
-    signinError: {
-      type: Boolean
-    },
-    signupError: {
+    error: {
       type: Boolean
     },
     errorMessage: {
@@ -130,10 +111,7 @@ export default {
   },
   methods: {
     emitRegisterUser() {
-      if (
-        this.$props.mode === "signup" ||
-        this.$props.mode === "resetPassword"
-      ) {
+      if (this.$props.mode.includes("passwordCheck")) {
         if (this.password === this.repeatPassword) {
           const data = {
             fullName: this.fullName,
@@ -160,7 +138,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.sign-form {
+.auth {
   &__card {
     width: 20rem;
     margin: 1rem auto;
@@ -177,6 +155,10 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  &__label {
+    text-align: left;
   }
 
   &__input {
@@ -251,7 +233,7 @@ export default {
 }
 
 @media (max-width: 450px) {
-  .sign-form {
+  .auth {
     &__card {
       width: 80%;
     }

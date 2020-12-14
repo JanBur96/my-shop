@@ -15,7 +15,9 @@ export default {
     products: {
       type: Array,
       required: true,
-      default: []
+      default: () => {
+        return [];
+      }
     },
     mode: {
       type: String

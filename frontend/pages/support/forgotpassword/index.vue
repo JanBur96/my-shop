@@ -3,25 +3,31 @@
     <base-container>
       <BaseHeader image="forgotpassword-header.jpg" heading="Forgot Password" />
       <h3 class="forgot-password__heading">Forgot Passowrd</h3>
-      <SignForm mode="forgot" @signAction="forgotPassword" v-if="!sendEmail" />
+      <AuthForm
+        mode="[email]"
+        @signAction="forgotPassword"
+        v-if="!sendEmail"
+        :error="error"
+        :error-message="errorMessage"
+      />
       <p class="forgot-password__paragraph" v-if="sendEmail">
         We've sent you an email! Please look follow the instructions in the
         email to reset your password.
       </p>
       <base-button class="forgot-password__button" v-if="sendEmail"
-        ><nuxt-link to="/signin">Back to Sign In</nuxt-link></base-button
+        ><nuxt-link to="/login">Back to Sign In</nuxt-link></base-button
       >
     </base-container>
   </main>
 </template>
 
 <script>
-import BaseButton from "../../../components/UI/BaseButton.vue";
 export default {
-  components: { BaseButton },
   data() {
     return {
-      sendEmail: false
+      sendEmail: false,
+      errorMessage: undefined,
+      error: false
     };
   },
   methods: {
@@ -33,6 +39,8 @@ export default {
         this.sendEmail = true;
       } catch (err) {
         console.log(err);
+        this.error = true;
+        this.errorMessage = err.response.data.error;
       }
     }
   }

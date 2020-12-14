@@ -3,12 +3,12 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _622b119d = () => interopDefault(import('../pages/faq/index.vue' /* webpackChunkName: "pages/faq/index" */))
-const _60fc8c5e = () => interopDefault(import('../pages/signin/index.vue' /* webpackChunkName: "pages/signin/index" */))
-const _559edfc7 = () => interopDefault(import('../pages/signup/index.vue' /* webpackChunkName: "pages/signup/index" */))
+const _0ed941a0 = () => interopDefault(import('../pages/login/index.vue' /* webpackChunkName: "pages/login/index" */))
+const _1cbf5692 = () => interopDefault(import('../pages/register/index.vue' /* webpackChunkName: "pages/register/index" */))
 const _122645d4 = () => interopDefault(import('../pages/support/index.vue' /* webpackChunkName: "pages/support/index" */))
 const _d6ec7500 = () => interopDefault(import('../pages/products/addproduct/index.vue' /* webpackChunkName: "pages/products/addproduct/index" */))
 const _7c52a624 = () => interopDefault(import('../pages/products/categories/index.vue' /* webpackChunkName: "pages/products/categories/index" */))
+const _1aea935d = () => interopDefault(import('../pages/support/faq/index.vue' /* webpackChunkName: "pages/support/faq/index" */))
 const _78b8f42d = () => interopDefault(import('../pages/support/forgotpassword/index.vue' /* webpackChunkName: "pages/support/forgotpassword/index" */))
 const _64e57086 = () => interopDefault(import('../pages/users/myprofile/index.vue' /* webpackChunkName: "pages/users/myprofile/index" */))
 const _8c021062 = () => interopDefault(import('../pages/products/categories/_categorie/index.vue' /* webpackChunkName: "pages/products/categories/_categorie/index" */))
@@ -36,17 +36,13 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
-    path: "/faq",
-    component: _622b119d,
-    name: "faq"
+    path: "/login",
+    component: _0ed941a0,
+    name: "login"
   }, {
-    path: "/signin",
-    component: _60fc8c5e,
-    name: "signin"
-  }, {
-    path: "/signup",
-    component: _559edfc7,
-    name: "signup"
+    path: "/register",
+    component: _1cbf5692,
+    name: "register"
   }, {
     path: "/support",
     component: _122645d4,
@@ -59,6 +55,10 @@ export const routerOptions = {
     path: "/products/categories",
     component: _7c52a624,
     name: "products-categories"
+  }, {
+    path: "/support/faq",
+    component: _1aea935d,
+    name: "support-faq"
   }, {
     path: "/support/forgotpassword",
     component: _78b8f42d,

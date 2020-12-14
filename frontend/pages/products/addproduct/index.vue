@@ -10,6 +10,7 @@
 
 <script>
 export default {
+  middleware: "auth",
   name: "AddProduct",
   methods: {
     async addProduct(data) {

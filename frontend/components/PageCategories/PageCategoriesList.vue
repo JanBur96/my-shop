@@ -19,7 +19,9 @@ export default {
     categories: {
       type: Array,
       required: true,
-      default: []
+      default: () => {
+        return [];
+      }
     }
   }
 };

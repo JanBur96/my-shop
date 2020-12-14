@@ -1,12 +1,12 @@
 <template>
-  <main class="signin">
+  <main class="login">
     <base-container>
-      <BaseHeader image="signin-header.jpg" heading="Sign In" />
-      <h3 class="signin__heading">Welcome back</h3>
-      <SignForm
-        mode="signin"
+      <BaseHeader image="login-header.jpg" heading="Sign In" />
+      <h3 class="login__heading">Welcome back</h3>
+      <AuthForm
+        mode="[email, password, socialLogin, forgotPassword]"
         @signAction="loginUser"
-        :signin-error="signinError"
+        :error="error"
         :error-message="errorMessage"
       />
     </base-container>
@@ -15,13 +15,13 @@
 
 <script>
 export default {
-  name: "SignIn",
+  name: "login",
   data() {
     return {
       email: undefined,
       password: undefined,
       errorMessage: undefined,
-      signinError: false
+      error: false
     };
   },
   methods: {
@@ -34,7 +34,7 @@ export default {
           }
         });
       } catch (err) {
-        this.signinError = true;
+        this.error = true;
         this.errorMessage = err.response.data.error;
       }
     }
@@ -43,7 +43,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.signin {
+.login {
   &__heading {
     text-align: center;
   }
