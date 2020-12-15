@@ -82,7 +82,7 @@
           v-if="mode.includes('forgotPassword')"
           >Forgot Password?</nuxt-link
         >
-        <nuxt-link to="faq">Need help?</nuxt-link>
+        <nuxt-link to="/support">Need help?</nuxt-link>
       </div>
     </base-card>
   </section>

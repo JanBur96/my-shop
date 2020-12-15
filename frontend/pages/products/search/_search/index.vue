@@ -3,7 +3,7 @@
     <base-container>
       <BaseHeader heading="Searching" image="search-header.jpg" />
       <h3 class="search__heading">Your results</h3>
-      <BaseList :products="products" />
+      <BaseList :products="products" mode="sort" />
     </base-container>
   </main>
 </template>

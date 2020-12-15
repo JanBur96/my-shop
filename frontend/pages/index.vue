@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: "Home",
+  name: "HomePage",
   data() {
     return {
       products: [],

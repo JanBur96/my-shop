@@ -20,6 +20,7 @@
 <script>
 export default {
   name: "MyProfile",
+  middleware: "auth",
   provide: {
     mode: "editable"
   },

@@ -47,9 +47,12 @@
             </button>
           </li>
           <li class="product__item product__item--alt">
-            <button class="product__button product__button--contact">
-              <fa class="product__icon" :icon="['far', 'envelope']" /> Contact
-            </button>
+            <nuxt-link :to="`/products/${this.$route.params.product}/contact`">
+              <button class="product__button product__button--contact">
+                <fa class="product__icon" :icon="['far', 'envelope']" />
+                Contact
+              </button>
+            </nuxt-link>
           </li>
         </ul>
       </div>

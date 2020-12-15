@@ -1,10 +1,21 @@
 <template>
   <footer class="footer">
     <base-container class="footer__container">
-      <div class="footer__row-1">
-        <p class="footer__logo">LocalShop</p>
-      </div>
       <div class="footer__row-2">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <fa class="footer__icon" :icon="['fab', 'facebook']" />
+          </li>
+          <li class="footer__item">
+            <fa class="footer__icon" :icon="['fab', 'twitter']" />
+          </li>
+          <li class="footer__item">
+            <fa class="footer__icon" :icon="['fab', 'instagram']" />
+          </li>
+        </ul>
+      </div>
+      <div class="footer__row-3">
+        <p>&copy; 2020 by LocalShop</p>
         <ul class="footer__list">
           <li class="footer__item">
             Terms
@@ -17,20 +28,6 @@
           </li>
           <li class="footer__item">
             Sitemap
-          </li>
-        </ul>
-      </div>
-      <div class="footer__row-3">
-        <p>&copy; 2020 by LocalShop</p>
-        <ul class="footer__list">
-          <li class="footer__item">
-            <fa class="footer__icon" :icon="['fab', 'facebook']" />
-          </li>
-          <li class="footer__item">
-            <fa class="footer__icon" :icon="['fab', 'twitter']" />
-          </li>
-          <li class="footer__item">
-            <fa class="footer__icon" :icon="['fab', 'instagram']" />
           </li>
         </ul>
         <p class="footer__fontawesome">Icons by Font Awesome</p>
@@ -52,14 +49,14 @@ export default {
   &__container {
     padding: 0 2rem;
     width: 100%;
-    height: 10rem;
+    height: 5rem;
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     align-items: center;
   }
 
-  &__row-1 {
-    text-align: center;
+  &__row-2 {
+    margin-top: 0.5rem;
   }
 
   &__row-3 {
@@ -79,7 +76,7 @@ export default {
   }
 
   &__item {
-    margin: 0 1rem;
+    margin: 0 0.75rem;
   }
 
   &__icon {
@@ -101,9 +98,6 @@ export default {
 
 @media (max-width: 768px) {
   .footer {
-    &__container {
-      height: 8rem;
-    }
   }
 }
 </style>

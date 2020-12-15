@@ -1,19 +1,22 @@
 <template>
   <main class="edit-product">
-    <BaseHeader heading="Edit Product" image="editproduct-header.jpg" />
-    <h3 class="edit-product__heading-3">
-      Edit your product
-    </h3>
-    <ProductForm
-      mode="update"
-      @productAction="productAction"
-      :product="product"
-    />
+    <base-container>
+      <BaseHeader heading="Edit Product" image="editproduct-header.jpg" />
+      <h3 class="edit-product__heading-3">
+        Edit your product
+      </h3>
+      <ProductForm
+        mode="update"
+        @productAction="productAction"
+        :product="product"
+      />
+    </base-container>
   </main>
 </template>
 
 <script>
 export default {
+  middleware: "auth",
   name: "UpdateProduct",
   methods: {
     async productAction(data) {
@@ -59,9 +62,17 @@ export default {
       }
     }
   },
-  async asyncData({ params, $axios }) {
+  async asyncData({ params, $axios, redirect }) {
     let product = await $axios.get(`/products/${params.update}`);
     product = product.data.data;
+
+    let user = await $axios.get("/auth/me");
+
+    user = user.data.data;
+
+    if (product.user !== user._id) {
+      redirect("/");
+    }
 
     return { product };
   }

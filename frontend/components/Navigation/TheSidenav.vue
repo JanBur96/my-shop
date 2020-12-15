@@ -50,6 +50,17 @@
             Logout
           </li>
         </ul>
+        <ul class="sidenav-container__list">
+          <li class="sidenav-container__item">
+            <nuxt-link to="/">Home</nuxt-link>
+          </li>
+          <li class="sidenav-container__item">
+            <nuxt-link to="/about">About</nuxt-link>
+          </li>
+          <li class="sidenav-container__item">
+            <nuxt-link to="/support">Support</nuxt-link>
+          </li>
+        </ul>
         <div class="sidenav-container__divider"></div>
         <ul class="sidenav-container__list--alt">
           <li class="sidenav-container__item sidenav-container__item--alt">

@@ -8,7 +8,7 @@
               <nuxt-link to="/">Home</nuxt-link>
             </li>
             <li class="header__item">
-              <nuxt-link to="/support/faq">FAQ</nuxt-link>
+              <nuxt-link to="/about">About</nuxt-link>
             </li>
             <li class="header__item">
               <nuxt-link to="/support">Support</nuxt-link>

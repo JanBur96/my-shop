@@ -3,12 +3,12 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
+const _1caa9358 = () => interopDefault(import('../pages/about/index.vue' /* webpackChunkName: "pages/about/index" */))
 const _0ed941a0 = () => interopDefault(import('../pages/login/index.vue' /* webpackChunkName: "pages/login/index" */))
 const _1cbf5692 = () => interopDefault(import('../pages/register/index.vue' /* webpackChunkName: "pages/register/index" */))
 const _122645d4 = () => interopDefault(import('../pages/support/index.vue' /* webpackChunkName: "pages/support/index" */))
 const _d6ec7500 = () => interopDefault(import('../pages/products/addproduct/index.vue' /* webpackChunkName: "pages/products/addproduct/index" */))
 const _7c52a624 = () => interopDefault(import('../pages/products/categories/index.vue' /* webpackChunkName: "pages/products/categories/index" */))
-const _1aea935d = () => interopDefault(import('../pages/support/faq/index.vue' /* webpackChunkName: "pages/support/faq/index" */))
 const _78b8f42d = () => interopDefault(import('../pages/support/forgotpassword/index.vue' /* webpackChunkName: "pages/support/forgotpassword/index" */))
 const _64e57086 = () => interopDefault(import('../pages/users/myprofile/index.vue' /* webpackChunkName: "pages/users/myprofile/index" */))
 const _8c021062 = () => interopDefault(import('../pages/products/categories/_categorie/index.vue' /* webpackChunkName: "pages/products/categories/_categorie/index" */))
@@ -17,6 +17,7 @@ const _0290689c = () => interopDefault(import('../pages/products/search/_search/
 const _5b6b3342 = () => interopDefault(import('../pages/products/_product/index.vue' /* webpackChunkName: "pages/products/_product/index" */))
 const _2951801a = () => interopDefault(import('../pages/support/_resetpassword/index.vue' /* webpackChunkName: "pages/support/_resetpassword/index" */))
 const _f5c65fac = () => interopDefault(import('../pages/users/_user/index.vue' /* webpackChunkName: "pages/users/_user/index" */))
+const _4575c7da = () => interopDefault(import('../pages/products/_product/contact/index.vue' /* webpackChunkName: "pages/products/_product/contact/index" */))
 const _0ca67b56 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 // TODO: remove in Nuxt 3
@@ -36,6 +37,10 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/about",
+    component: _1caa9358,
+    name: "about"
+  }, {
     path: "/login",
     component: _0ed941a0,
     name: "login"
@@ -55,10 +60,6 @@ export const routerOptions = {
     path: "/products/categories",
     component: _7c52a624,
     name: "products-categories"
-  }, {
-    path: "/support/faq",
-    component: _1aea935d,
-    name: "support-faq"
   }, {
     path: "/support/forgotpassword",
     component: _78b8f42d,
@@ -91,6 +92,10 @@ export const routerOptions = {
     path: "/users/:user",
     component: _f5c65fac,
     name: "users-user"
+  }, {
+    path: "/products/:product?/contact",
+    component: _4575c7da,
+    name: "products-product-contact"
   }, {
     path: "/",
     component: _0ca67b56,

@@ -1,5 +1,12 @@
 [
   {
+    "name": "about",
+    "path": "/about",
+    "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/about/index.vue",
+    "chunkName": "pages/about/index",
+    "_name": "_1caa9358"
+  },
+  {
     "name": "login",
     "path": "/login",
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/login/index.vue",
@@ -33,13 +40,6 @@
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/products/categories/index.vue",
     "chunkName": "pages/products/categories/index",
     "_name": "_7c52a624"
-  },
-  {
-    "name": "support-faq",
-    "path": "/support/faq",
-    "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/support/faq/index.vue",
-    "chunkName": "pages/support/faq/index",
-    "_name": "_1aea935d"
   },
   {
     "name": "support-forgotpassword",
@@ -96,6 +96,13 @@
     "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/users/_user/index.vue",
     "chunkName": "pages/users/_user/index",
     "_name": "_f5c65fac"
+  },
+  {
+    "name": "products-product-contact",
+    "path": "/products/:product?/contact",
+    "component": "/Users/jan-philippburghardt/Desktop/MLS/frontend/pages/products/_product/contact/index.vue",
+    "chunkName": "pages/products/_product/contact/index",
+    "_name": "_4575c7da"
   },
   {
     "name": "index",

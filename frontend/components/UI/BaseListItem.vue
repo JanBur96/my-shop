@@ -47,7 +47,6 @@ export default {
 <style lang="scss" scoped>
 .base-item {
   transition: 0.35s;
-  max-width: 12rem;
 
   &:hover {
     box-shadow: 0px 0px 4px 2px rgba($color: #000000, $alpha: 0.2);

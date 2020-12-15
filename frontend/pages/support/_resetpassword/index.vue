@@ -1,11 +1,13 @@
 <template>
   <main class="reset-password">
-    <BaseHeader heading="Reset Password" image="forgotpassword-header.jpg" />
-    <h3 class="reset-password__heading">Reset your password</h3>
-    <AuthForm
-      mode="[password, repeatPassword, passwordCheck]"
-      @signAction="resetPassword"
-    />
+    <base-container>
+      <BaseHeader heading="Reset Password" image="forgotpassword-header.jpg" />
+      <h3 class="reset-password__heading">Reset your password</h3>
+      <AuthForm
+        mode="[password, repeatPassword, passwordCheck]"
+        @signAction="resetPassword"
+      />
+    </base-container>
   </main>
 </template>
 
