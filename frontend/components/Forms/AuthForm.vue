@@ -92,7 +92,9 @@
 export default {
   name: "AuthForm",
   props: {
-    mode: {},
+    mode: {
+      type: String
+    },
     error: {
       type: Boolean
     },

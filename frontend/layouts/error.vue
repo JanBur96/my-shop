@@ -7,8 +7,8 @@
       </h1>
       <img
         class="error__image"
-        src="~/assets/images/error404-vector.svg"
-        alt=""
+        src="~/assets/images/vector/error404-vector.svg"
+        alt="Vector graphic with a 404"
       />
       <ul class="error__list">
         <li>

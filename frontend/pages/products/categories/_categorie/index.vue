@@ -35,7 +35,6 @@ export default {
   methods: {
     sortProducts(data) {
       this.sortBy = data;
-      console.log("runs");
       this.fetchAgain();
     },
     async nextPage() {

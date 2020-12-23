@@ -5,7 +5,7 @@
         <img
           class="base-item__image"
           :src="require(`~/assets/product-images/${photo}`)"
-          alt=""
+          :alt="`Photo of ${title}`"
         />
         <div class="base-item__text">
           <h4 class="base-item__title">{{ title }}</h4>

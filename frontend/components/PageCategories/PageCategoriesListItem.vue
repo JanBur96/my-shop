@@ -1,6 +1,8 @@
 <template>
   <li
-    :style="{ backgroundImage: `url(${require(`@/assets/images/${image}`)})` }"
+    :style="{
+      backgroundImage: `url(${require(`@/assets/images/header/${image}`)})`
+    }"
     class="all-categories-item"
   >
     <nuxt-link

@@ -3,8 +3,8 @@
     <div class="persons__person">
       <img
         class="persons__image"
-        src="~assets/images/about-person1.jpg"
-        alt=""
+        src="~assets/images/about/about-person1.jpg"
+        alt="Picture of John Doe"
       />
       <h4 class="persons__name">John Doe</h4>
       <h5 class="persons__position">CEO</h5>
@@ -17,8 +17,8 @@
     <div class="persons__person">
       <img
         class="persons__image"
-        src="~assets/images/about-person2.jpg"
-        alt=""
+        src="~assets/images/about/about-person2.jpg"
+        alt="Picture of Jane Doe"
       />
       <h4 class="persons__name">Jane Doe</h4>
       <h5 class="persons__position">HR Lead</h5>
@@ -31,8 +31,8 @@
     <div class="persons__person">
       <img
         class="persons__image"
-        src="~assets/images/about-person3.jpg"
-        alt=""
+        src="~assets/images/about/about-person3.jpg"
+        alt="Picture of Marc Smith"
       />
       <h4 class="persons__name">Marc Smith</h4>
       <h5 class="persons__position">Tech Lead</h5>

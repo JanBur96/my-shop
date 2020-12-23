@@ -38,7 +38,7 @@ export default {
         });
         this.sendEmail = true;
       } catch (err) {
-        console.log(err);
+        console.error(err);
         this.error = true;
         this.errorMessage = err.response.data.error;
       }

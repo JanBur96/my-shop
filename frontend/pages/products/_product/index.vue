@@ -6,7 +6,7 @@
         <img
           class="product__image"
           :src="require(`~/assets/product-images/${product.photo}`)"
-          alt=""
+          :alt="`Photo of ${product.title}`"
         />
 
         <div class="product__information">

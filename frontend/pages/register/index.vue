@@ -4,7 +4,7 @@
       <BaseHeader image="register-header.jpg" heading="Sign Up" />
       <h3 class="register__heading">Welcome to Localshop</h3>
       <AuthForm
-        mode="[fullName, email, password, repeatPassword, socialLogin, forgotPassword]"
+        mode="[fullName, email, password, repeatPassword, socialLogin, forgotPassword, passwordCheck]"
         @signAction="registerUser"
         :error="error"
         :error-message="errorMessage"
@@ -38,7 +38,7 @@ export default {
           }
         });
       } catch (err) {
-        console.log(err.response);
+        console.error(err.response);
         this.error = true;
         this.errorMessage = err.response.data.error;
       }

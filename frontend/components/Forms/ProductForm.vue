@@ -8,13 +8,22 @@
       </p>
       <form class="product-form__form" action="" @submit.prevent>
         <base-form-control>
-          <label for="">Title</label>
-          <input class="product-form__input" v-model="title" type="text" />
+          <label for="title">Title</label>
+          <input
+            name="title"
+            class="product-form__input"
+            v-model="title"
+            type="text"
+          />
         </base-form-control>
         <div class="product-form__form-control--3-col">
           <base-form-control>
-            <label for="">Category</label>
-            <select v-model="category" class="product-form__input">
+            <label for="category">Category</label>
+            <select
+              name="category"
+              v-model="category"
+              class="product-form__input"
+            >
               <option value="technology">Technology</option>
               <option value="furniture">Furniture</option>
               <option value="clothes">Clothes</option>
@@ -22,12 +31,18 @@
             </select>
           </base-form-control>
           <base-form-control>
-            <label for="">Location</label>
-            <input class="product-form__input" v-model="location" type="text" />
+            <label for="location">Location</label>
+            <input
+              name="location"
+              class="product-form__input"
+              v-model="location"
+              type="text"
+            />
           </base-form-control>
           <base-form-control>
-            <label for="">Price</label>
+            <label for="price">Price</label>
             <input
+              name="price"
               class="product-form__input"
               v-model="price"
               type="number"
@@ -36,8 +51,9 @@
           </base-form-control>
         </div>
         <base-form-control>
-          <label for="">Description</label>
+          <label for="description">Description</label>
           <textarea
+            name="description"
             v-model="description"
             class="product-form__input--area"
             rows="7"
@@ -45,13 +61,12 @@
         </base-form-control>
         <div class="product-form__image-upload" v-if="mode === 'update'">
           <base-form-control>
-            <label for="" :style="!fileValid ? 'color: red' : ''"
+            <label for="upload" :style="!fileValid ? 'color: red' : ''"
               >Upload Image (Max. 1MB)</label
             >
             <input
               type="file"
-              name=""
-              id=""
+              name="upload"
               @change="processFile($event)"
               class="product-form__input--file"
             />

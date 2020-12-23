@@ -65,12 +65,10 @@
       </form>
     </div>
 
-    <div v-if="mode !== 'editable'" class="profile__wrapper profile__wrapper-2">
-      <ul class="profile__list">
-        <li><button class="profile__button--alt">Message</button></li>
-        <li><button class="profile__button--alt">Follow</button></li>
-      </ul>
-    </div>
+    <div
+      v-if="mode !== 'editable'"
+      class="profile__wrapper profile__wrapper-2"
+    ></div>
   </section>
 </template>
 

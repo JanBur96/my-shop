@@ -25,8 +25,6 @@ export default {
     let me = await $axios.get("/auth/me");
     me = me.data.data;
 
-    console.log(me.name);
-
     return { product, user, me };
   },
   methods: {

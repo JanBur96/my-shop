@@ -1,7 +1,9 @@
 <template>
   <div
     class="base-header"
-    :style="{ backgroundImage: `url(${require(`@/assets/images/${image}`)})` }"
+    :style="{
+      backgroundImage: `url(${require(`@/assets/images/header/${image}`)})`
+    }"
   >
     <h2 class="base-header__heading">{{ heading }}</h2>
   </div>
