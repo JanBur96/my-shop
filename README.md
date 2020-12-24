@@ -41,6 +41,7 @@ I've also used Font Awesome for the Icons.
 - Different kinds of validation
 - Register
 - Login
+- Forgot Password
 - Edit Profile
 - Add Products
 - Edit Products
