@@ -1,4 +1,4 @@
-![Screenshot of LocalShop](https://i.imgur.com/XVcozta.png)
+![Screenshot of LocalShop](https://i.imgur.com/HI2be5b.png)
 
 # LocalShop
 
