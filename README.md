@@ -60,4 +60,5 @@ I've also used Font Awesome for the Icons.
 [] Wishlist <br>
 [] Share <br>
 [] Follow/Subscribe <br>
+[] Backend Security <br>
 [] (Messaging/Chat with Socket) <br>
