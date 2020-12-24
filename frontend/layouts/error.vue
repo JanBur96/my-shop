@@ -2,9 +2,9 @@
   <main class="error">
     <div class="error404" v-if="error.statusCode === 404">
       <BaseHeader heading="Error 404" image="error-header.jpg" />
-      <h1 class="error__heading">
+      <h3 class="error__heading">
         The page you're looking for doesn't exist
-      </h1>
+      </h3>
       <img
         class="error__image"
         src="~/assets/images/vector/error404-vector.svg"
@@ -44,12 +44,13 @@ export default {
 .error {
   &__heading {
     text-align: center;
+    font-size: 2rem;
   }
 
   &__image {
     margin-top: 2rem;
-    height: 20rem;
     width: 100%;
+    height: 20rem;
   }
 
   &__list {
@@ -61,12 +62,12 @@ export default {
   }
 
   &__button {
-    height: 2rem;
     width: 8rem;
+    height: 2rem;
     border: none;
     border: 1px solid var(--main-color);
-    color: var(--main-color);
     border-radius: 5px;
+    color: var(--main-color);
     background-color: white;
     font-size: 1rem;
   }

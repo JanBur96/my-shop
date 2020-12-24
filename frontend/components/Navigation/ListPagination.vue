@@ -4,7 +4,7 @@
       <li class="pagination__item" v-if="prevPagination" @click="emitPrev">
         <fa class="pagination__icon" :icon="['fas', 'arrow-left']" />
       </li>
-      <li class="pagination__item">{{ page }}</li>
+      <li class="pagination__item">{{ page > 0 ? page : 1 }}</li>
       <li class="pagination__item" v-if="nextPagination" @click="emitNext">
         <fa class="pagination__icon" :icon="['fas', 'arrow-right']" />
       </li>

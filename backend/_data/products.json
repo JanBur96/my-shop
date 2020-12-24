@@ -1,38 +1,283 @@
 [
   {
     "_id": "5d713995b721c3bb38c1f5d0",
-    "user": "5d7a514b5d2c12c7449be042",
-    "title": "iPhone 10",
-    "description": "I sell my used iPhone 10",
-    "categories": ["technology"],
+    "user": "5d7a514b5d2c12c7449be043",
+    "title": "Mercedes-Benz",
+    "description": "I sell my loved Mercedes. Contact me for more details",
+    "categories": "misc",
     "location": "Bielefeld",
-    "price": 499.99
+    "price": 50000,
+    "photo": "no-photo.jpg"
   },
   {
     "_id": "5d713995b721c3bb38c1f5d1",
-    "user": "5d7a514b5d2c12c7449be042",
-    "title": "Socks",
-    "description": "I got them to christmas, and I really don' want to keep them",
-    "categories": ["clothes"],
+    "user": "5d7a514b5d2c12c7449be043",
+    "title": "Cool Chair",
+    "description": "I sell my used Chair",
+    "categories": "furniture",
     "location": "Bielefeld",
-    "price": 9.99
+    "price": 99.99,
+    "photo": "no-photo.jpg"
   },
   {
     "_id": "5d713995b721c3bb38c1f5d2",
-    "user": "5d7a514b5d2c12c7449be042",
-    "title": "Cool Lamp",
-    "description": "I loved this cool lamp, but I bought a new one, which is cooler, that's why I want to sell this good piece.",
-    "categories": ["furniture"],
+    "user": "5d7a514b5d2c12c7449be043",
+    "title": "Good used chair",
+    "description": "I don't need this anymore",
+    "categories": "furniture",
     "location": "Bielefeld",
-    "price": 12.0
+    "price": 20,
+    "photo": "no-photo.jpg"
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5d3",
+    "user": "5d7a514b5d2c12c7449be043",
+    "title": "Tissot Watch",
+    "description": "Got a new one, that's why I sell this one",
+    "categories": "clothes",
+    "location": "Bielefeld",
+    "price": 250,
+    "photo": "no-photo.jpg"
   },
   {
     "_id": "5d713995b721c3bb38c1f5d4",
-    "user": "5d7a514b5d2c12c7449be042",
-    "title": "bed",
-    "description": "bed",
-    "categories": ["furniture"],
+    "user": "5d7a514b5d2c12c7449be043",
+    "title": "Chair",
+    "description": "Chair",
+    "categories": "furniture",
     "location": "Bielefeld",
-    "price": 155
+    "price": 10,
+    "photo": "no-photo.jpg"
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5d5",
+    "user": "5d7a514b5d2c12c7449be043",
+    "title": "Chess Game",
+    "description": "Maybe anyone can need this",
+    "categories": "misc",
+    "location": "Bielefeld",
+    "price": 25,
+    "photo": "no-photo.jpg"
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5d6",
+    "user": "5d7a514b5d2c12c7449be043",
+    "title": "Clothes",
+    "description": "You can see what I sell on the image, please contact me for more information. The price is 30€ each.",
+    "categories": "clothes",
+    "location": "Bielefeld",
+    "price": 30,
+    "photo": "no-photo.jpg"
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5d7",
+    "user": "5d7a514b5d2c12c7449be043",
+    "title": "Outfit",
+    "description": "No, you can't buy single items. It's a outfit which I sell as a outfit.",
+    "categories": "clothes",
+    "location": "Bielefeld",
+    "price": 120,
+    "photo": "no-photo.jpg"
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5d8",
+    "user": "5d7a514b5d2c12c7449be043",
+    "title": "Top",
+    "description": "what should i say",
+    "categories": "clothes",
+    "location": "Bielefeld",
+    "price": 15,
+    "photo": "no-photo.jpg"
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5d9",
+    "user": "5d7a514b5d2c12c7449be043",
+    "title": "Outfit for Men",
+    "description": "I've only worn this 2-3 times",
+    "categories": "clothes",
+    "location": "Bielefeld",
+    "price": 119.99,
+    "photo": "no-photo.jpg"
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5e0",
+    "user": "5d7a514b5d2c12c7449be043",
+    "title": "Elegant jacket",
+    "description": "I sell this jacket, contact for more informations",
+    "categories": "clothes",
+    "location": "Bielefeld",
+    "price": 89,
+    "photo": "no-photo.jpg"
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5e1",
+    "user": "5d7a514b5d2c12c7449be043",
+    "title": "Gaming Controller",
+    "description": "I switched to M+K gaming, so I sell this controller",
+    "categories": "technology",
+    "location": "Bielefeld",
+    "price": 30,
+    "photo": "no-photo.jpg"
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5e2",
+    "user": "5d7a514b5d2c12c7449be043",
+    "title": "Couch",
+    "description": "You have to get this couch by yourself, I won't ship it or bring it to you.",
+    "categories": "furniture",
+    "location": "Bielefeld",
+    "price": 40,
+    "photo": "no-photo.jpg"
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5e3",
+    "user": "5d7a514b5d2c12c7449be043",
+    "title": "Sofa",
+    "description": "I don't know what to write, just contact me",
+    "categories": "furniture",
+    "location": "Bielefeld",
+    "price": 60,
+    "photo": "no-photo.jpg"
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5e4",
+    "user": "5d7a514b5d2c12c7449be043",
+    "title": "Designer Couch",
+    "description": "Just 1 year old, no signs of use",
+    "categories": "furniture",
+    "location": "Bielefeld",
+    "price": 300,
+    "photo": "no-photo.jpg"
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5e5",
+    "user": "5d7a514b5d2c12c7449be043",
+    "title": "Headphones like Airpods",
+    "description": "Basically the same quality - just cheaper",
+    "categories": "technology",
+    "location": "Bielefeld",
+    "price": 45,
+    "photo": "no-photo.jpg"
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5e6",
+    "user": "5d7a514b5d2c12c7449be044",
+    "title": "Sony Headphones",
+    "description": "I got the new airpods max so I have no use for these headphones anymore",
+    "categories": "technology",
+    "location": "Bielefeld",
+    "price": 120,
+    "photo": "no-photo.jpg"
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5e7",
+    "user": "5d7a514b5d2c12c7449be044",
+    "title": "Apple Airpods",
+    "description": "I bought the airpods pro so u can have these",
+    "categories": "technology",
+    "location": "Bielefeld",
+    "price": 100,
+    "photo": "no-photo.jpg"
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5e8",
+    "user": "5d7a514b5d2c12c7449be044",
+    "title": "iPhone",
+    "description": "I sell my used iPhone",
+    "categories": "technology",
+    "location": "Bielefeld",
+    "price": 399.99,
+    "photo": "no-photo.jpg"
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5e9",
+    "user": "5d7a514b5d2c12c7449be044",
+    "title": "Dell Laptop",
+    "description": "2-3 years old, good specs. Please don't negotiate the price!",
+    "categories": "technology",
+    "location": "Bielefeld",
+    "price": 500,
+    "photo": "no-photo.jpg"
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5f0",
+    "user": "5d7a514b5d2c12c7449be044",
+    "title": "MacBook",
+    "description": "MacBook",
+    "categories": "technology",
+    "location": "Bielefeld",
+    "price": 600,
+    "photo": "no-photo.jpg"
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5f1",
+    "user": "5d7a514b5d2c12c7449be044",
+    "title": "my old lego",
+    "description": "A lot of cool lego",
+    "categories": "misc",
+    "location": "Bielefeld",
+    "price": 30,
+    "photo": "no-photo.jpg"
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5f2",
+    "user": "5d7a514b5d2c12c7449be044",
+    "title": "Phone",
+    "description": "I sell my used phone",
+    "categories": "technology",
+    "location": "Bielefeld",
+    "price": 499.99,
+    "photo": "no-photo.jpg"
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5f3",
+    "user": "5d7a514b5d2c12c7449be044",
+    "title": "Good Screen",
+    "description": "Rarely used",
+    "categories": "technology",
+    "location": "Bielefeld",
+    "price": 200,
+    "photo": "no-photo.jpg"
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5f4",
+    "user": "5d7a514b5d2c12c7449be044",
+    "title": "iPad",
+    "description": "Had to buy a new one for work",
+    "categories": "technology",
+    "location": "Bielefeld",
+    "price": 250,
+    "photo": "no-photo.jpg"
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5f5",
+    "user": "5d7a514b5d2c12c7449be044",
+    "title": "Tablet with Keyboard",
+    "description": "I just sell them together",
+    "categories": "technology",
+    "location": "Bielefeld",
+    "price": 550,
+    "photo": "no-photo.jpg"
+  },
+
+  {
+    "_id": "5d713995b721c3bb38c1f5f6",
+    "user": "5d7a514b5d2c12c7449be044",
+    "title": "IWC Watch",
+    "description": "Please contact me for details.",
+    "categories": "clothes",
+    "location": "Bielefeld",
+    "price": 1500.0,
+    "photo": "no-photo.jpg"
+  },
+  {
+    "_id": "5d713995b721c3bb38c1f5f7",
+    "user": "5d7a514b5d2c12c7449be044",
+    "title": "AW4",
+    "description": "aw4",
+    "categories": "technology",
+    "location": "Bielefeld",
+    "price": 150,
+    "photo": "no-photo.jpg"
   }
 ]

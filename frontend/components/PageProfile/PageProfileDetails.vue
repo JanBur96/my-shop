@@ -78,9 +78,9 @@ export default {
   data() {
     return {
       editUser: false,
-      editName: "",
-      editEmail: "",
-      editLocation: ""
+      editName: this.$props.name,
+      editEmail: this.$props.email,
+      editLocation: this.$props.location
     };
   },
   methods: {

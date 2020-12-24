@@ -1,17 +1,13 @@
-// Third-Party modules
 const fs = require('fs');
 const mongoose = require('mongoose');
 const colors = require('colors');
 const dotenv = require('dotenv');
 
-// Load env variables
 dotenv.config({ path: './config/config.env' });
 
-// Load models
 const Product = require('./models/Product');
 const User = require('./models/User');
 
-// Connect to DB
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useCreateIndex: true,
@@ -54,7 +50,7 @@ const deleteData = async () => {
   }
 };
 
-// Prefixes (node seeder -i | node seeder -d)
+// Prefixes ("node seeder -i" for import | "node seeder -d" for delete)
 if (process.argv[2] === '-i') {
   importData();
 } else if (process.argv[2] === '-d') {

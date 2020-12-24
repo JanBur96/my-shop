@@ -1,7 +1,10 @@
 <template>
   <main>
     <base-container>
-      <BaseHeader image="overview-technology.jpg" :heading="categorieName" />
+      <BaseHeader
+        :image="`overview-${categorieName.toLowerCase()}.jpg`"
+        :heading="categorieName"
+      />
       <BaseList
         mode="sort"
         :category="categorieName"

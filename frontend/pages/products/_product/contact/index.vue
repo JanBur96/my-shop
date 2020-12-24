@@ -14,6 +14,7 @@
 
 <script>
 export default {
+  middleware: "auth",
   name: "Contact",
   async asyncData({ params, $axios }) {
     let product = await $axios.get(`/products/${params.product}`);

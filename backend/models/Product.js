@@ -38,7 +38,7 @@ const ProductSchema = new mongoose.Schema({
   },
 });
 
-// Creating index for the search
+// Creating index for the search by title functionality
 ProductSchema.index({ title: 'text' });
 
 module.exports = mongoose.model('Product', ProductSchema);

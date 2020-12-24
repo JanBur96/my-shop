@@ -39,7 +39,10 @@ export default {
       type: Number,
       required: true
     },
-    photo: {}
+    photo: {
+      type: String,
+      required: false
+    }
   }
 };
 </script>

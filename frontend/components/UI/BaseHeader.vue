@@ -2,7 +2,7 @@
   <div
     class="base-header"
     :style="{
-      backgroundImage: `url(${require(`@/assets/images/header/${image}`)})`
+      background: `url(${require(`@/assets/images/header/${image}`)}) center center/cover`
     }"
   >
     <h2 class="base-header__heading">{{ heading }}</h2>
@@ -36,12 +36,10 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 0px 5px 1px rgba($color: #000000, $alpha: 0.2);
-  border-radius: 5px;
   color: white;
   font-size: 3rem;
-  background-position: center;
-  background-size: cover;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 1px rgba($color: #000000, $alpha: 0.2);
   overflow: hidden;
 
   &::before {
@@ -50,16 +48,16 @@ export default {
     height: 100%;
     top: 0;
     left: 0;
-    border-radius: 5px;
     background: rgba($color: #000000, $alpha: 0.2);
-    content: "";
+    border-radius: 5px;
     z-index: 10;
+    content: "";
   }
 
   &__heading {
-    z-index: 100;
     text-shadow: 1px 1px rgba($color: #000000, $alpha: 0.2);
     text-transform: capitalize;
+    z-index: 100;
   }
 }
 </style>

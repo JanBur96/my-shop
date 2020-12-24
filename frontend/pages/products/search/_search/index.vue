@@ -3,7 +3,12 @@
     <base-container>
       <BaseHeader heading="Searching" image="search-header.jpg" />
       <h3 class="search__heading">Your results</h3>
-      <BaseList :products="products" mode="sort" />
+      <BaseList
+        :class="products.length < 5 ? 'search__list-alt' : ''"
+        :products="products"
+        mode="sort"
+        :modeList="products.length < 5 ? 'searchList' : undefined"
+      />
     </base-container>
   </main>
 </template>
@@ -20,4 +25,10 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.search {
+  &__list-alt {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}
+</style>

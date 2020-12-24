@@ -34,7 +34,7 @@
           </div>
         </div>
       </base-card>
-      <div class="product__action">
+      <div class="product__action" v-if="$auth.loggedIn">
         <ul class="product__list product__list--alt">
           <li class="product__item product__item--alt">
             <button class="product__button product__button--share">

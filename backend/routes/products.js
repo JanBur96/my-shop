@@ -1,7 +1,5 @@
-// Third-Party modules
 const express = require('express');
 
-// Own modules
 const {
   getProducts,
   createProduct,
